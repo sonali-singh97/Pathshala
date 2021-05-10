@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/materialize/materialize.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="md:container md:mx-auto px-12">
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-red-300">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+          labore optio quos mollitia ipsa quis iure quae corrupti repellendus
+          tempora ea maiores quo veritatis est modi eaque, iste debitis
+          dignissimos!
+        </div>
+        <div class="bg-green-300">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+          labore optio quos mollitia ipsa quis iure quae corrupti repellendus
+          tempora ea maiores quo veritatis est modi eaque, iste debitis
+          dignissimos!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
