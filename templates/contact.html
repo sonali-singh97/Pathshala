@@ -9,25 +9,95 @@
       rel="stylesheet"
       href="{% static 'css/materialize/materialize.min.css' %}"
     />
+    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
     <title>{{ title }}</title>
   </head>
   <body>
-    <div class="md:container md:mx-auto px-12">
-      <div class="grid grid-cols-2 gap-3">
-        <div class="bg-red-300">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
-          labore optio quos mollitia ipsa quis iure quae corrupti repellendus
-          tempora ea maiores quo veritatis est modi eaque, iste debitis
-          dignissimos!
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 d-flex flex-column">
+          <h2 class="heading">Get in Touch</h2>
+          <p class="contact-desc">
+            You can contact us anyway that is convinent to you. We would be
+            happy to answer your questions
+          </p>
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" />
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row">
+              <div class="input-field col s6">
+                <input id="email" type="text" class="validate" />
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="phone" type="text" class="validate" />
+                <label for="phone">Phone</label>
+              </div>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="message" class="materialize-textarea"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button
+              type="submit"
+              class="btn waves-effect waves-light green"
+              style="width: fit-content"
+            >
+              Send Message
+            </button>
+          </div>
         </div>
-        <div class="bg-green-300">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
-          labore optio quos mollitia ipsa quis iure quae corrupti repellendus
-          tempora ea maiores quo veritatis est modi eaque, iste debitis
-          dignissimos!
+        <div class="col s12 m4 contact-info">
+          <div class="f-flex flex-column">
+            <p class="contact-info-heading">Phones</p>
+            <p style="color: grey">
+              <i class="fas fa-phone" style="color: rgb(31, 30, 30)"></i
+              >&nbsp;+91 1238756740
+            </p>
+            <p style="color: grey">
+              <i class="fas fa-phone" style="color: rgb(31, 30, 30)"></i
+              >&nbsp;+91 8905672356
+            </p>
+          </div>
+          <div class="f-flex flex-column">
+            <p class="contact-info-heading" style="margin-top: 30px">E-Mail</p>
+            <a href="mailto:contact@vps.com">
+              <i class="fas fa-envelope" style="color: rgb(31, 30, 30)"></i
+              >&nbsp;&nbsp;contact@vps.com
+            </a>
+          </div>
+          <div class="f-flex flex-column">
+            <p class="contact-info-heading" style="margin-top: 30px">Address</p>
+            <p style="color: grey">
+              <i class="fas fa-map-marked" style="color: rgb(31, 30, 30)"></i
+              >&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <div class="f-flex flex-column">
+            <p class="contact-info-heading" style="margin-top: 30px">
+              Opening Hours
+            </p>
+            <p style="color: grey">
+              <i class="fas fa-calendar-alt" style="color: rgb(31, 30, 30)"></i
+              >&nbsp;&nbsp;Mon-Fri: 8:00AM - 4:00PM<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sat: 8:00AM - 1:00PM<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun: Closed<br />
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
   </body>
 </html>
