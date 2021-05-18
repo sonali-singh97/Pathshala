@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{% static 'css/materialize/materialize.min.css' %}"
-    />
-    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
-    <title>{{ title }}</title>
-  </head>
-  <body>
+{% extends './base.html' %} 
+{% block title %}
+{{ block.super }}Contact
+{% endblock title %} 
+{% block content %}
     <div class="container">
       <div class="row">
         <div class="col s12 m8 d-flex flex-column">
@@ -107,6 +96,4 @@
         style="margin-bottom: 30px"
       ></iframe>
     </div>
-    <script src="{% static 'js/materialize.min.js' %}"></script>
-  </body>
-</html>
+    {% endblock content %} 

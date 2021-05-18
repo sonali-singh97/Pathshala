@@ -8,3 +8,6 @@ def contact_page(request):
 
 def about_page(request):
     return render(request, "about.html", { "title": "Vimal Public School | About Us" })
+
+def joinus_page(request):
+    return render(request, 'about.html', { "title": "Vimal Public School | Join Us" })
