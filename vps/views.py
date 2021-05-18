@@ -5,3 +5,6 @@ def home_page(request):
 
 def contact_page(request):
     return render(request, 'contact.html', { 'title': "Vimal Public School | Contact Us" })
+
+def about_page(request):
+    return render(request, "about.html", { "title": "Vimal Public School | About Us" })

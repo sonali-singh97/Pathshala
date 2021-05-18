@@ -71,3 +71,32 @@ body {
 input {
   background-color: aqua;
 }
+
+.about-p-card {
+  margin-top: 45px;
+  margin-left: auto;
+  width: 300px;
+}
+
+.staff-card {
+  margin-top: 10px;
+  width: 300px;
+}
+
+.staff-card-2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.staff-card-3 {
+  margin-left: auto;
+  width: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .staff-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
