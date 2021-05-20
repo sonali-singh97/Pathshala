@@ -1,0 +1,31 @@
+@import url('./styles.css');
+
+.footer-braker {
+    height: 0.8px;
+    width: 100%;
+    background-color: rgb(190, 187, 187);
+}
+
+.footer-logo {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+p.footer-heading {
+    margin-top: 0;
+    font-size: 18px;
+    padding-left: 0 !important;
+    font-weight: 500;
+    margin-bottom: 6px !important;
+}
+
+p.footer-heading::after {
+    display: block;
+    height: 1.2px;
+    width: 50px;
+    background-color: var(--bg-color);
+    margin-top: 5px;
+    content: "";
+    position: absolute;
+}
