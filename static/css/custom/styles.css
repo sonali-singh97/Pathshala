@@ -2,10 +2,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #9D2D35;
+  --font-color:#202020;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
 }
 
 .heading::after {
@@ -17,32 +22,9 @@ body {
   content: "";
 }
 
-.d-flex {
-  display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-.align-items-center {
-  align-items: center;
-}
-
 .contact-desc {
   color: grey;
   margin-top: 30px;
-}
-
-.w-100 {
-  width: 100% !important;
 }
 
 .ml-input {
@@ -80,18 +62,18 @@ input {
 
 .staff-card {
   margin-top: 10px;
-  width: 300px;
+  max-width: 300px;
 }
 
 .staff-card-2 {
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  max-width: 300px;
 }
 
 .staff-card-3 {
   margin-left: auto;
-  width: 300px;
+  max-width: 300px;
 }
 
 @media screen and (max-width: 480px) {
