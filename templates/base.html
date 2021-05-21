@@ -12,14 +12,17 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/utilities.css' %}" />
     <link rel="stylesheet" href="{% static 'css/custom/home.css' %}" /> 
+    <link rel="stylesheet" href="{% static 'css/custom/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/utils.css' %}" />
     <title>{% block title %}Vimal Public School | {% endblock title %}</title>
   </head>
   <body>
     {% comment %} NAVIGATION BAR {% endcomment %} {% comment %} NAVIGATION BAR
     END {% endcomment %} {% block content %}{% endblock content %} {% comment %}
-    FOOTER {% endcomment %} {% comment %} FOOTER END {% endcomment %}
-
+    FOOTER {% endcomment %} {% comment %} FOOTER END {% endcomment %} 
+    {% include './footer.html' %}
     <script src="{% static 'js/materialize.min.js' %}"></script>
   </body>
 </html>
