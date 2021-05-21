@@ -1,5 +1,25 @@
 @import "./styles.css";
 
+.page{
+    padding:20px;
+}
+
+.border-bottom{
+    border-bottom:2px solid var(--bg-color);
+    width: 20%;
+
+}
+
+
+
+
 nav{
     background-color: var(--bg-color);
 }
+
+div.carousel.carousel-slider {
+    height:100vh !important;
+  }
+
+
+

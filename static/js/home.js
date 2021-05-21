@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, {});
 
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {fullWidth : true});
+     elems = document.querySelectorAll('.carousel');
+    var instance = M.Carousel.init(elems, {
+      fullWidth: true,
+      indicators: true
+    });
 
     console.log("inside js")
   });

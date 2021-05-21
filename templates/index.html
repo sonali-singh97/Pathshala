@@ -5,6 +5,8 @@
 {% endblock title %} 
 {% block content %}
 
+<div class="page text-center">
+
 <nav> 
     <div class="nav-wrapper">
      <a href="#" class="brand-logo">Logo</a>
@@ -28,15 +30,15 @@
     <li><a href="#">Contact</a></li>
     <li><a href="#">Login</a></li>
   </ul>
-<!--  
-  <div class="carousel carousel-slider" data-indicators="true">
+ 
+  <div class="carousel carousel-slider slideshow" data-indicators="true" >
     <a class="carousel-item" href="#one!"><img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwY2hpbGRyZW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#two!"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#three!"><img src="https://images.unsplash.com/photo-1495727034151-8fdc73e332a8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#four!"><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNjaG9vbCUyMGNoaWxkcmVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
-  </div> -->
+  </div>
 
-  <div class="carousel carousel-slider center">
+  <!-- <div class="carousel carousel-slider center" data-indicators="true">
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white grey-text darken-text-2">button</a>
     </div>
@@ -56,7 +58,23 @@
       <h2>Fourth Panel</h2>
       <p class="white-text">This is your fourth panel</p>
     </div>
-  </div>
+  </div> -->
+
+  <section class="about-section">
+  <h2 class="border-bottom">A Few Words About School</h2>
+  <p>One of the world's premier academic and research institutions, the Learner University has driven new ways of thinking since our 1876 founding. Today, we are an intellectual destination that draws inspired scholars to our Hyde Park and international campuses, keeping us at the nexus of ideas that challenge and change the world.</p>
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">Learn More
+    <i class="material-icons right">arrow_forward</i>
+  </button>
+  </section>
 
 
+  <aside>
+
+  </aside>
+
+</div>
+
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock content %}
