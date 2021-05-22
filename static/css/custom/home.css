@@ -20,9 +20,9 @@ nav {
 
 
 div.carousel.carousel-slider {
-    margin-top: 39px;
+    /* margin-top: 39px; */
     height: calc(100vh - 50px);
-    ;
+
 }
 
 div.carousel .carousel-item img {
@@ -43,7 +43,7 @@ div.carousel .carousel-item img {
 }
 
 .news-content a {
-    color: var(--bg-color)
+    color: #494a4c;
 }
 
 .news-date {
@@ -110,6 +110,52 @@ div.carousel .carousel-item img {
 }
 
 
+.date-card {
+    background-color: inherit;
+    border: 1px solid #ccc;
+    color: #696a6d;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+}
+
+.date-card .date {
+    margin: 0;
+    color: var(--bg-color);
+}
+
+/* Events section */
+.events-section .card-image {
+    height: 40rem;
+}
+
+.events-section .card-image img {
+    height: 100%;
+}
+
+
+.events-section .card-content {
+    padding: 0;
+}
+
+.events-section .date-card {
+    background-color: var(--bg-color);
+    border: none;
+    color: #ffe894;
+
+}
+
+.events-section .date-card .date{
+    color: #ffe894;
+}
+
+.events-section .card-content .event-name{
+    flex: 1;
+}
+
+
+
 @media only screen and (min-width: 601px) {
     .navbar-top-panel {
         display: block;
@@ -146,37 +192,60 @@ div.carousel .carousel-item img {
 
     }
 
+    div.carousel.carousel-slider {
+        height: 60vh;
+
+    }
+
     .nav-wrapper ul a,
     .brand-logo {
         font-size: 1.6rem;
         color: var(--font-color);
     }
 
-    .about-section,
+    /* .about-section,
     .news-section {
         padding: 0 5rem;
-    }
+    } */
 
     .info-section {
-        padding: 0 8rem;
+        padding: 5rem 8rem;
         display: flex;
         justify-content: space-around;
         align-content: center;
     }
-    
-    .about-section h2{
+
+
+    /* .about-section h2{
          margin-bottom: 3rem;
     }
     .about-section p{
         margin-top: 6rem !important;
-    }
+    } */
 
     .message-section {
-       padding:8rem;
+        padding: 8rem 10rem !important;
     }
 
-   .message-section .message{
-       padding-right: 5rem;
+
+    .message-body {
+        font-size: 2.4rem;
+    }
+
+    .message-section .position {
+        font-size: 1.4rem;
+    }
+
+    .events-section{
+       padding:8rem !important;
+   }
+
+   .events-section-cards{
+       padding: 3rem 5rem ;
+   }
+   
+   .events-section-cards .card{
+       margin: 0 1rem;
    }
 
 }

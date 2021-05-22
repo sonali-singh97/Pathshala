@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var carousel = document.querySelectorAll('.carousel');
     var instance = M.Carousel.init(carousel, {  fullWidth: true,
       indicators: true});
+
+  });
+
+
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
   });
   // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
  // var collapsibleElem = document.querySelector('.collapsible');

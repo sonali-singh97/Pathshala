@@ -1,3 +1,5 @@
+@import "./styles.css";
+
 .d-flex {
   display: flex;
 }
@@ -23,24 +25,21 @@
 }
 
 .text-center {
-  text-align: center;
+  text-align: center ;
+}
+
+.mt-50 {
+    margin-top: 5rem;
 }
 
 .mt-20 {
-    margin-top: 50px;
-}
-
-.mt-20 {
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .my-20 {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-/* new */
-@import "./styles.css";
 
 .text-bold{
     font-weight: 700;
@@ -71,21 +70,22 @@ button.btn {
     margin-top:5rem;
 }
 
-.margin-top-35{
+.mt-35{
    margin-top: 3.5rem;
 } 
 
-.margin-top-30{
+.mt-30{
     margin-top: 30px;;
 }
 
 .padding-tb-50{
-    padding-top:5rem !important;
-    padding-bottom: 5rem !important;
+    padding-top:5rem ;
+    padding-bottom: 5rem ;
 }
 
-.padding-20{
-    padding: 0 2rem;
+.padding-lr-20{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .padding-lr-50{
