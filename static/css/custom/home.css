@@ -1,0 +1,259 @@
+@import "./styles.css";
+
+/* .page{
+    padding:20px;
+} */
+/* nav top panel */
+.navbar-top-panel {
+    display: none;
+}
+
+
+nav {
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+
+div.carousel.carousel-slider {
+    /* margin-top: 39px; */
+    height: calc(100vh - 50px);
+
+}
+
+div.carousel .carousel-item img {
+    height: 100%;
+}
+
+
+
+/* Latest news section */
+
+.news-card {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem 0 !important;
+    color: var(--bg-color)
+}
+
+.news-content a {
+    color: #494a4c;
+}
+
+.news-date {
+    border-radius: 1rem;
+    background-color: #BB7572;
+    padding: 0.5rem;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+.news-card h2 {
+    margin: 0;
+}
+
+.news-date p {
+    margin: 0;
+}
+
+
+/* Message Section */
+
+.message-section {
+    color: #fff;
+}
+
+.message-section img {
+    border-radius: 100%;
+}
+
+.bg-pattern {
+    background-color: var(--bg-color);
+    background-image: url(../../images/pattern.png);
+    background-size: cover;
+}
+
+.message-body {
+    position: relative;
+    font-size: 16px;
+    font-style: italic;
+    font-family: "Merriweather", "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.message-section cite {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-family: "Merriweather", "Times New Roman", Times, serif;
+}
+
+.message-section .position {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: "Merriweather", "Times New Roman", Times, serif;
+    margin-top: 0.5rem;
+}
+
+
+.fa-quote-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+
+.date-card {
+    background-color: inherit;
+    border: 1px solid #ccc;
+    color: #696a6d;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+}
+
+.date-card .date {
+    margin: 0;
+    color: var(--bg-color);
+}
+
+/* Events section */
+
+.events-section .card-image {
+    height: 40rem;
+}
+
+.events-section .card-image img {
+    height: 100%;
+}
+
+
+.events-section .card-content {
+    padding: 0;
+}
+
+.events-section .date-card {
+    background-color: var(--bg-color);
+    border: none;
+    color: #ffe894;
+
+}
+
+.events-section .date-card .date{
+    color: #ffe894;
+}
+
+.events-section .card-content .event-name{
+    flex: 1;
+}
+
+
+/* owl carousel */
+
+div.owl-dots{
+    display: none;
+}
+
+.owl-nav {
+position:absolute;
+top:8.5rem;
+}
+
+.owl-carousel .owl-prev {
+    left: -35px;
+  }
+  
+  .owl-carousel .owl-next {
+    right: -35px;
+  }
+
+
+@media only screen and (min-width: 601px) {
+    .navbar-top-panel {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-color);
+        color: #fff;
+        padding: 0.5rem 5rem;
+        font-size: 1.4rem;
+    }
+
+    .navbar-top-panel-left ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 7rem;
+    }
+
+    .navbar-top-panel-left a {
+        color: #fff;
+    }
+
+    .navbar-top-panel .fas {
+        margin-right: 1rem;
+        opacity: 0.6;
+        font-size: 2rem;
+    }
+
+    nav {
+        height: 7rem;
+        padding: 1rem 5rem;
+        align-items: center;
+        background-color: #fff;
+
+    }
+
+    div.carousel.carousel-slider {
+        height: 60vh;
+
+    }
+
+    .nav-wrapper ul a,
+    .brand-logo {
+        font-size: 1.6rem;
+        color: var(--font-color);
+    }
+
+    .info-section {
+        padding: 5rem 8rem;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .message-section {
+        padding: 8rem 10rem !important;
+    }
+
+
+    .message-body {
+        font-size: 2.4rem;
+    }
+
+    .message-section .position {
+        font-size: 1.4rem;
+    }
+
+    .events-section{
+       padding:8rem !important;
+   }
+
+   .events-section-cards{
+       padding: 3rem 5rem ;
+   }
+   
+   .events-section-cards .card{
+       margin: 1.75rem  1rem;
+
+   }
+
+}
