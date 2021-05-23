@@ -22,5 +22,8 @@ urlpatterns = [
     path('', views.home_page),
     path('contact/', views.contact_page),
     path('about/', views.about_page),
-    path('joinus/', views.joinus_page)
+    path('joinus/', views.joinus_page),
+    path('events/', views.events_page),
+    path('event-page/', views.event_detail),
+    path('addmission', views.addmission_page, name="addmission")
 ]

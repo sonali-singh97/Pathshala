@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{% static 'css/materialize/materialize.min.css' %}"
-    />
-    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
-    <title>{% block title %}Vimal Public School | {% endblock title %}</title>
-  </head>
-  <body>
-    {% comment %} NAVIGATION BAR {% endcomment %} {% comment %} NAVIGATION BAR
-    END {% endcomment %} {% block content %}{% endblock content %} {% comment %}
-    FOOTER {% endcomment %} {% comment %} FOOTER END {% endcomment %}
 
-    <script src="{% static 'js/materialize.min.js' %}"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/materialize/materialize.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/custom/event.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/custom/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/custom/footer.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/custom/utils.css' %}" />
+  <title>{% block title %}Vimal Public School | {% endblock title %}</title>
+</head>
+
+<body>
+  {% comment %} NAVIGATION BAR {% endcomment %}
+  {% include './navbar.html' %}
+  {% comment %} NAVIGATION BAR END {% endcomment %}
+   {% block content %}{% endblock content %}
+   {% comment %}  FOOTER {% endcomment %} 
+   {% include './footer.html' %}
+   {% comment %} FOOTER END {% endcomment %}
+
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
+
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+
 </html>
