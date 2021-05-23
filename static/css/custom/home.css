@@ -126,6 +126,7 @@ div.carousel .carousel-item img {
 }
 
 /* Events section */
+
 .events-section .card-image {
     height: 40rem;
 }
@@ -154,6 +155,25 @@ div.carousel .carousel-item img {
     flex: 1;
 }
 
+
+/* owl carousel */
+
+div.owl-dots{
+    display: none;
+}
+
+.owl-nav {
+position:absolute;
+top:8.5rem;
+}
+
+.owl-carousel .owl-prev {
+    left: -35px;
+  }
+  
+  .owl-carousel .owl-next {
+    right: -35px;
+  }
 
 
 @media only screen and (min-width: 601px) {
@@ -203,25 +223,12 @@ div.carousel .carousel-item img {
         color: var(--font-color);
     }
 
-    /* .about-section,
-    .news-section {
-        padding: 0 5rem;
-    } */
-
     .info-section {
         padding: 5rem 8rem;
         display: flex;
         justify-content: space-around;
         align-content: center;
     }
-
-
-    /* .about-section h2{
-         margin-bottom: 3rem;
-    }
-    .about-section p{
-        margin-top: 6rem !important;
-    } */
 
     .message-section {
         padding: 8rem 10rem !important;
@@ -245,7 +252,8 @@ div.carousel .carousel-item img {
    }
    
    .events-section-cards .card{
-       margin: 0 1rem;
+       margin: 1.75rem  1rem;
+
    }
 
 }

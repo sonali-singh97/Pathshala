@@ -1,0 +1,42 @@
+{% extends './base.html' %} 
+{% load static %}
+{% block title %}
+{{ block.super }} Event Page
+{% endblock title %} 
+{% block content %}
+
+<div class="page padding-tb-50 text-center">
+    <div class="event-detail row padding-lr-20">
+        <div class="col s12 m6 event-image">
+            <img src="https://35zdx72gxff41x10fm1rg5xo-wpengine.netdna-ssl.com/wp-content/uploads/2019/09/portfolio-1.jpg" alt="event-image" />
+        </div>
+
+        <div class="col s12 m6 event-description">
+            <h2 class="heading"> Event Name</h2>
+            <p class="mt-35">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam exercitationem obcaecati corrupti doloribus quo ipsa facilis esse minus dicta! Rem, quis natus! Amet, incidunt laboriosam maxime repellendus consectetur voluptate?
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga aut tempora, quod laborum mollitia asperiores atque impedit assumenda officia voluptatibus perspiciatis incidunt et beatae nam quis quo. Accusantium, consectetur quisquam?
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery-listing mt-50 padding-lr-20 padding-tb-50">
+        <h2 class="heading">Gallery Listing</h2>
+        <div class="row mt-35">
+        <div class="col s12 m4 card-image">
+            <img src="https://35zdx72gxff41x10fm1rg5xo-wpengine.netdna-ssl.com/wp-content/uploads/2019/09/portfolio-1.jpg" alt="event-image" />
+        </div>
+        <div class="col s12 m4 card-image">
+            <img src="https://35zdx72gxff41x10fm1rg5xo-wpengine.netdna-ssl.com/wp-content/uploads/2019/09/portfolio-1.jpg" alt="event-image" />
+        </div>
+        <div class="col s12 m4 card-image">
+            <img src="https://35zdx72gxff41x10fm1rg5xo-wpengine.netdna-ssl.com/wp-content/uploads/2019/09/portfolio-1.jpg" alt="event-image" />
+        </div>
+    </div>
+    </div>
+
+
+</div>
+
+{% endblock content %}

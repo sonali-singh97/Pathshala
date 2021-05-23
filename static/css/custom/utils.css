@@ -40,6 +40,27 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+.mt-35{
+  margin-top: 3.5rem;
+} 
+
+.mt-30{
+   margin-top: 30px;;
+}
+
+.padding-tb-50{
+   padding-top:5rem ;
+   padding-bottom: 5rem ;
+}
+
+.padding-lr-20{
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.padding-lr-50{
+ padding: 0 5rem;
+}
 
 .text-bold{
     font-weight: 700;
@@ -66,28 +87,5 @@ button.btn {
     font-size: 1.6rem;
 }
 
-.margin-top-50{
-    margin-top:5rem;
-}
 
-.mt-35{
-   margin-top: 3.5rem;
-} 
 
-.mt-30{
-    margin-top: 30px;;
-}
-
-.padding-tb-50{
-    padding-top:5rem ;
-    padding-bottom: 5rem ;
-}
-
-.padding-lr-20{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.padding-lr-50{
-  padding: 0 5rem;
-}

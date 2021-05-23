@@ -11,3 +11,9 @@ def about_page(request):
 
 def joinus_page(request):
     return render(request, 'about.html', { "title": "Vimal Public School | Join Us" })
+
+def events_page(request):
+    return render(request, 'events.html' , { 'title': "Vimal Public School | Events" })
+
+def event_detail(request):
+    return render(request, 'event-page.html' , { 'title': "Vimal Public School | Event Name" })

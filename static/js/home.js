@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   $(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
+    
+    let owl = $('.owl-carousel')
+     owl.owlCarousel({
+      nav: true,
+      slideSpeed : 100,
+      paginationSpeed : 200,
+      items:1
+   })
+
+
+
   });
   // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
  // var collapsibleElem = document.querySelector('.collapsible');

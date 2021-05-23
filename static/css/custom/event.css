@@ -1,0 +1,31 @@
+.event-detail img, .gallery-listing img{
+    max-width: 100%;
+}
+
+.gallery-listing{
+    background-color: #ccc;
+}
+
+.gallery-listing .card-image:not(:last-child){
+    margin-bottom: 3rem;
+    
+}
+
+@media only screen and (min-width: 601px){
+   .page .event-detail{
+        padding:8rem;
+    }
+
+    .event-detail .event-image, .event-detail .event-description {
+        padding-left:5rem;
+        padding-right: 5rem;
+    }
+
+    .page .gallery-listing{
+        padding: 8rem;
+    }
+
+    .gallery-listing .card-image{
+        padding: 1rem 2rem;
+    }
+}
