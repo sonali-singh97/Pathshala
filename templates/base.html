@@ -22,10 +22,14 @@
 </head>
 
 <body>
-  {% comment %} NAVIGATION BAR {% endcomment %} {% comment %} NAVIGATION BAR
-  END {% endcomment %} {% block content %}{% endblock content %} {% comment %}
-  FOOTER {% endcomment %} {% comment %} FOOTER END {% endcomment %}
-  {% include './footer.html' %}
+  {% comment %} NAVIGATION BAR {% endcomment %}
+  {% include './navbar.html' %}
+  {% comment %} NAVIGATION BAR END {% endcomment %}
+   {% block content %}{% endblock content %}
+   {% comment %}  FOOTER {% endcomment %} 
+   {% include './footer.html' %}
+   {% comment %} FOOTER END {% endcomment %}
+
   <script src="{% static 'js/materialize.min.js' %}"></script>
 
 
