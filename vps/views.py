@@ -17,3 +17,6 @@ def events_page(request):
 
 def event_detail(request):
     return render(request, 'event-page.html' , { 'title': "Vimal Public School | Event Name" })
+
+def addmission_page(request):
+    return render(request, 'addmission.html')
