@@ -17,7 +17,18 @@ nav {
     z-index: 10;
 }
 
+nav .brand-logo {
+    color: #121212;
+    font-size: 1.6rem;
+}
 
+nav .nav-wrapper ul {
+    margin : 0;
+}
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+    line-height: 3.2 !important;
+}
 
 div.carousel.carousel-slider {
     /* margin-top: 39px; */
@@ -26,7 +37,10 @@ div.carousel.carousel-slider {
 }
 
 div.carousel .carousel-item img {
+    width:100%;
     height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
 }
 
 
@@ -38,7 +52,7 @@ div.carousel .carousel-item img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.5rem 0 !important;
+    padding: 1rem 0 !important;
     color: var(--bg-color)
 }
 
@@ -83,20 +97,17 @@ div.carousel .carousel-item img {
     position: relative;
     font-size: 16px;
     font-style: italic;
-    font-family: "Merriweather", "Times New Roman", Times, serif;
     font-weight: bold;
 }
 
 .message-section cite {
     font-size: 1.8rem;
     font-style: normal;
-    font-family: "Merriweather", "Times New Roman", Times, serif;
 }
 
 .message-section .position {
     font-size: 1.2rem;
     font-style: italic;
-    font-family: "Merriweather", "Times New Roman", Times, serif;
     margin-top: 0.5rem;
 }
 
@@ -122,6 +133,7 @@ div.carousel .carousel-item img {
 
 .date-card .date {
     margin: 0;
+    margin-bottom: -0.8rem;
     color: var(--bg-color);
 }
 
@@ -213,7 +225,8 @@ top:8.5rem;
     }
 
     div.carousel.carousel-slider {
-        height: 60vh;
+       height: 60vh;
+        /* height: calc(100vh - 150px); */
 
     }
 
@@ -221,6 +234,7 @@ top:8.5rem;
     .brand-logo {
         font-size: 1.6rem;
         color: var(--font-color);
+        
     }
 
     .info-section {

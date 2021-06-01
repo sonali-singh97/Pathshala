@@ -17,3 +17,9 @@ def events_page(request):
 
 def event_detail(request):
     return render(request, 'event-page.html' , { 'title': "Vimal Public School | Event Name" })
+
+def news_page(request):
+    return render(request, 'news.html' , { 'title': "Vimal Public School | News" })
+
+def resources_page(request):
+    return render(request, 'resources.html' , { 'title': "Vimal Public School | Resources" })

@@ -1,0 +1,55 @@
+@import "./styles.css";
+
+.news-page .news-card {
+    justify-content: flex-start;
+}
+
+.news-page .news-card:hover {
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+.news-page .date-card {
+    background-color: var(--bg-color);
+    color: #fff;
+    margin-right: 2rem;
+}
+
+.news-page .date-card .date {
+    color: #fff;
+    padding: 5rem auto;
+}
+
+.months-list .month-list-item {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.months-list .month-list-item:hover {
+    cursor: pointer
+}
+
+
+@media only screen and (min-width: 601px) {
+
+    .news-page {
+        padding: 8rem;
+    }
+
+    .news-page .months-list {
+        margin-top: 5rem;
+    }
+
+    .news-page .news-list {
+        width: 60%;
+        margin: auto;
+        /* margin-top:3.5rem; */
+    }
+
+    .news-page .date-card {
+        margin-right: 3rem;
+    }
+}
