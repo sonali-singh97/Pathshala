@@ -20,3 +20,6 @@ def event_detail(request):
 
 def addmission_page(request):
     return render(request, 'addmission.html')
+
+def staffs_page(request):
+    return render(request, 'staffs.html')
