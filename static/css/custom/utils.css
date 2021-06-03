@@ -59,8 +59,8 @@
 }
 
 .padding-lr-20{
-   padding-left: 2rem;
-   padding-right: 2rem;
+   padding-left: 2rem !important;
+   padding-right: 2rem !important;
 }
 
 .padding-lr-50{

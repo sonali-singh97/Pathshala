@@ -1,0 +1,51 @@
+@import "./styles.css";
+
+.text-bold{
+    font-weight: 700;
+}
+
+.text-right{
+    text-align: right;
+}
+
+button.btn {
+   color : var(--bg-color);
+   border: 2px solid var(--bg-color);
+   background-color: inherit;
+   font-size: 1.6rem;
+   box-shadow: 0 4px 8px 0 rgb(0, 0 ,0 , 0.2);
+   font-weight: 700;
+   padding:0.8rem 2.7rem;
+   transition: all 0.3s;
+   box-sizing:content-box;
+}
+
+.material-icons{
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.margin-top-50{
+    margin-top:5rem;
+}
+
+.margin-top-35{
+   margin-top: 3.5rem;
+} 
+
+.margin-top-30{
+    margin-top: 30px;;
+}
+
+.padding-tb-50{
+    padding-top:5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.padding-20{
+    padding: 0 2rem;
+}
+
+.padding-lr-50{
+  padding: 0 5rem;
+}

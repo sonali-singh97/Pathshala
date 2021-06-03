@@ -25,6 +25,8 @@ urlpatterns = [
     path('joinus/', views.joinus_page),
     path('events/', views.events_page),
     path('event-page/', views.event_detail),
+    path('news/', views.news_page),
+    path('resources/', views.resources_page),
     path('addmission/', views.addmission_page, name="addmission"),
     path('staffs/', views.staffs_page, name="staffs")
 ]

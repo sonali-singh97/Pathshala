@@ -15,13 +15,13 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: #f2f2f2;
-  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+  background-color: #fdfdfd;
+  font-family: "Poppins";
 }
 
 h1, h2, h3, h4, h5, h6{
   line-height: 1.5;
-  /* font-family: "Merriweather", "Times New Roman", Times, serif; */
+  font-family: "Poppins";
   font-weight: bold;
 }
 

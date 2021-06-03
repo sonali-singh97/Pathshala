@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var instance = M.Carousel.init(carousel, {  fullWidth: true,
       indicators: true});
 
+   var materialBox = document.querySelectorAll('.materialboxed');
+   var materialBoxInstance = M.Materialbox.init(materialBox, {});
+
+   var dropdown = document.querySelectorAll('.dropdown-trigger');
+   var dropdownInstance = M.Dropdown.init(dropdown, {});
+
   });
 
 
@@ -19,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       items:1
    })
 
+  //  $('.materialboxed').materialbox();
 
 
   });
