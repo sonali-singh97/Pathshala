@@ -12,11 +12,6 @@ html {
   letter-spacing: 2px;
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Black.ttf") format("ttf"),
-}
-
 body {
   padding: 0;
   margin: 0;
