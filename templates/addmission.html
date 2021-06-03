@@ -1,0 +1,83 @@
+{% extends './base.html' %}
+{% block title %}
+{{ block.super }}Addmission
+{% endblock title %}
+{% block content %}
+<!-- <div class="container"> -->
+    <div class="row justify-content-center">
+        <div class="col offset-m3 m6 s12 text-center">
+            <h2 class="heading">Addmission</h2>
+            <p class="mt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur hic perferendis facilis animi et possimus at debitis laborum tenetur doloremque praesentium doloribus molestias.</p>
+        </div>
+    </div>
+
+    <!-- ADDMISSION STEPS -->
+    <div class="row padding-tb-50 padding-lr-20" style="background: #9D2D35; color:white">
+        <div class="col m3 s12">
+            <div class="row">
+                <div class="col s2 text-center">
+                    <h3 style="margin-top: 20px;">1.</h3>
+                </div>
+                <div class="col s10 d-flex flex-column">
+                    <h3>Start Online Submission</h3>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 s12">
+            <div class="row">
+                <div class="col s2 text-center">
+                    <h3 style="margin-top: 20px;">2.</h3>
+                </div>
+                <div class="col s10 d-flex flex-column">
+                    <h3>Review The Submission</h3>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 s12">
+            <div class="row">
+                <div class="col s2 text-center">
+                    <h3 style="margin-top: 20px;">3.</h3>
+                </div>
+                <div class="col s10 d-flex flex-column">
+                    <h3>Gather Necessary Documents</h3>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 s12">
+            <div class="row">
+                <div class="col s2 text-center">
+                    <h3  style="margin-top: 20px;">4.</h3>
+                </div>
+                <div class="col s10 d-flex flex-column">
+                    <h3>Last Decision</h3>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADDMISSION ENQUIRY FORM -->
+    <div class="row justify-content-center">
+        <div class="col offset-m3 m6 s12 text-center">
+            <div class="flex flex-column justify-content-center ">
+                <div class="input-field col s6 w-100">
+                    <input id="fname" type="text" class="validate" />
+                    <label for="fname">Full Name</label>
+                </div>
+                <div class="input-field col s6 w-100">
+                    <input id="email" type="text" class="validate" />
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s6 w-100">
+                    <input id="contact" type="text" class="validate" />
+                    <label for="contact">Contact Number</label>
+                </div>
+                <button class="btn" style="margin-top: 10px;">Submit</button>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+{% endblock content %}

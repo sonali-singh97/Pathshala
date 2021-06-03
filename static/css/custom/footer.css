@@ -1,41 +1,42 @@
-@import url('./styles.css');
+@import url("./styles.css");
 
 .footer-braker {
-    height: 0.8px;
-    width: 100%;
-    background-color: rgb(190, 187, 187);
+  height: 0.8px;
+  width: 100%;
+  background-color: rgb(190, 187, 187);
 }
 
 .footer-logo {
-    height: 100px;
-    width: 100px;
-    margin-bottom: 40px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 40px;
 }
 
 p.footer-heading {
-    margin-top: 0;
-    font-size: 18px;
-    padding-left: 0 !important;
-    font-weight: 500;
-    margin-bottom: 6px !important;
+  margin-top: 0;
+  font-size: 18px;
+  padding-left: 0 !important;
+  font-weight: 500;
+  margin-bottom: 6px !important;
 }
 
 p.footer-heading::after {
-    display: block;
-    height: 1.2px;
-    width: 50px;
-    background-color: var(--bg-color);
-    margin-top: 5px;
-    content: "";
-    position: absolute;
+  display: block;
+  height: 1.2px;
+  width: 50px;
+  background-color: var(--bg-color);
+  margin-top: 5px;
+  content: "";
+  position: absolute;
 }
 
 a.social-links-1 {
+
     text-decoration: none;
     color: rgb(138, 135, 135) !important;
     background-color: #eee;
     display: inline-block;
-    padding: 8px 18px 10px 17px !important;
+    padding: 12px 17px 11px 17px !important;
     border-radius: 50%;
     font-size: 1.5rem;
     border: solid 2.5px #eee;
@@ -43,8 +44,8 @@ a.social-links-1 {
 }
 
 a.social-links-1:hover {
-    background-color: var(--bg-color);
-    color: #fff !important;
+  background-color: var(--bg-color);
+  color: #fff !important;
 }
 
 a.social-links-2 {
@@ -53,7 +54,7 @@ a.social-links-2 {
     display: inline-block;
     background-color: #eee;
     color: rgb(138, 135, 135) !important;
-    padding: 8px 16px 10px 15px !important;
+    padding: 12px 15px 11px 15px !important;
     border-radius: 50%;
     font-size: 1.5rem;
     border: solid 2.5px #eee;
@@ -61,8 +62,8 @@ a.social-links-2 {
 }
 
 a.social-links-2:hover {
-    background-color: var(--bg-color);
-    color: #fff !important;
+  background-color: var(--bg-color);
+  color: #fff !important;
 }
 
 a.social-links-3 {
@@ -71,7 +72,7 @@ a.social-links-3 {
     display: inline-block;
     background-color: #eee;
     color: rgb(138, 135, 135) !important;
-    padding: 8px 16px 10px 15px !important;
+    padding: 12px 15px 11px 15px !important;
     border-radius: 50%;
     font-size: 1.5rem;
     border: solid 2.5px #eee;
@@ -79,8 +80,8 @@ a.social-links-3 {
 }
 
 a.social-links-3:hover {
-    background-color: var(--bg-color);
-    color: #fff !important;
+  background-color: var(--bg-color);
+  color: #fff !important;
 }
 
 a.social-links-4 {
@@ -89,14 +90,15 @@ a.social-links-4 {
     display: inline-block;
     background-color: #eee;
     color: rgb(138, 135, 135) !important;
-    padding: 8px 16px 10px 15px !important;
+    padding: 12px 15px 11px 15px !important;
     border-radius: 50%;
     font-size: 1.5rem;
     border: solid 2.5px #eee;
     transition-duration: 0.3s;
+
 }
 
 a.social-links-4:hover {
-    background-color: var(--bg-color);
-    color: #fff !important;
+  background-color: var(--bg-color);
+  color: #fff !important;
 }
