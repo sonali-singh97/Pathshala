@@ -1,0 +1,93 @@
+{% extends 'vpsBase/base.html' %} 
+{% load static %}
+{% block title %}
+{{ block.super }}About
+{% endblock title %} 
+{% block content %}
+    <div class="container">
+      <div class="row">
+        <div class="col m8 s12 d-flex flex-column">
+          <h2 class="heading">Meeting of Minds</h2>
+          <p style="font-size: 1.2rem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+            quisquam reprehenderit et provident, laboriosam reiciendis laborum.
+            Sed beatae, numquam minima modi sit suscipit unde enim blanditiis,
+            repellat voluptate asperiores culpa ut a maxime ab consectetur
+            dolorum. Officiis, optio? Voluptates assumenda unde laborum
+            praesentium possimus exercitationem minus ratione amet non in.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
+            deleniti ipsa dolore consectetur ex atque eaque sint, sequi eveniet
+            aspernatur?
+          </p>
+        </div>
+        <div class="col m4 s12">
+          <div class="card about-p-card">
+            <div class="card-image">
+              <img src="{% static 'images/user.png' %}" height="270" />
+            </div>
+            <div class="card-content d-flex flex-column" style="padding: 12px">
+              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
+                Dr. Rajat Sharma
+              </h5>
+              <p style="color: grey; margin-left: 2px">
+                Principal and Director, VPS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MORE STAFFS SECTION -->
+      <div class="row justify-content-center" style="margin-top: 100px">
+        <div class="col m4 s12">
+          <div class="card staff-card">
+            <div class="card-image">
+              <img src="{% static 'images/user.png' %}" height="270" />
+            </div>
+            <div class="card-content d-flex flex-column" style="padding: 12px">
+              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
+                Dr. Rajat Sharma
+              </h5>
+              <p style="color: grey; margin-left: 2px">
+                Principal and Director, VPS
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col m4 s12">
+          <div class="card staff-card-2">
+            <div class="card-image">
+              <img src="{% static 'images/user.png' %}" height="270" />
+            </div>
+            <div class="card-content d-flex flex-column" style="padding: 12px">
+              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
+                Dr. Rajat Sharma
+              </h5>
+              <p style="color: grey; margin-left: 2px">
+                Principal and Director, VPS
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col m4 s12 d-flex">
+          <div class="card staff-card-3">
+            <div class="card-image">
+              <img src="{% static 'images/user.png' %}" height="270" />
+            </div>
+            <div class="card-content d-flex flex-column" style="padding: 12px">
+              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
+                Dr. Rajat Sharma
+              </h5>
+              <p style="color: grey; margin-left: 2px">
+                Principal and Director, VPS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock content %} 

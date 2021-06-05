@@ -28,11 +28,11 @@
       <a href="#" data-target="mobile-nav" class="sidenav-trigger "> <i class="material-icons">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="#">Academics</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
   </nav>
