@@ -23,6 +23,7 @@ def news_page(request):
 
 def resources_page(request):
     return render(request, 'resources.html' , { 'title': "Vimal Public School | Resources" })
+    
 def addmission_page(request):
     return render(request, 'addmission.html')
 
