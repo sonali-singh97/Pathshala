@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from aboutAndStaffs.models import About
 
 def about(request):
-    return render(request, 'aboutAndStaffs/about.html')
+    about_content = About.objects.all()
+    return render(request, 'aboutAndStaffs/about.html', { 'about': about_content[0] })
 
 def joinUs(request):
     return render(request, 'aboutAndStaffs/joinUs.html')

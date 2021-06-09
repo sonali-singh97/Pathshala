@@ -10,6 +10,9 @@ class About(models.Model):
     contact = models.IntegerField(default=0)
     school_address = models.CharField(max_length=20, null=True)
 
+    def __str__(self):
+        return self.email
+
 class Teacher(models.Model):
     teacher_name = models.CharField(max_length=25)
     designation = models.CharField(max_length=15)
