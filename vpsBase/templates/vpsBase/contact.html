@@ -51,26 +51,25 @@
             <p class="contact-info-heading">Phones</p>
             <p style="color: grey">
               <i class="fas fa-phone" style="color: rgb(31, 30, 30)"></i
-              >&nbsp;+91 1238756740
+              >&nbsp;+91 {{ about_content.contact }}
             </p>
-            <p style="color: grey">
+            {% comment %} <p style="color: grey">
               <i class="fas fa-phone" style="color: rgb(31, 30, 30)"></i
               >&nbsp;+91 8905672356
-            </p>
+            </p> {% endcomment %}
           </div>
           <div class="f-flex flex-column">
             <p class="contact-info-heading" style="margin-top: 30px">E-Mail</p>
             <a href="mailto:contact@vps.com">
               <i class="fas fa-envelope" style="color: rgb(31, 30, 30)"></i
-              >&nbsp;&nbsp;contact@vps.com
+              >&nbsp;&nbsp;{{ about_content.email }}
             </a>
           </div>
           <div class="f-flex flex-column">
             <p class="contact-info-heading" style="margin-top: 30px">Address</p>
             <p style="color: grey">
               <i class="fas fa-map-marked" style="color: rgb(31, 30, 30)"></i
-              >&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit.
+              >&nbsp;&nbsp;{{ about_content.school_address }}
             </p>
           </div>
           <div class="f-flex flex-column">
