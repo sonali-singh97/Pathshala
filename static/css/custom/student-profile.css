@@ -1,0 +1,10 @@
+.student-details .student-img , .student-profile .teacher-img{
+    width: 50%;
+}
+
+.student-details .student-img img, .student-profile .teacher-img img{
+    width: 100%;
+    height: 20rem;
+    border-radius: 100%;
+}
+

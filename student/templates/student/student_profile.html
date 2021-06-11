@@ -1,0 +1,95 @@
+{% extends 'vpsBase/base.html' %}
+{% load static %}
+{% block title %}
+{{ block.super }}Student
+{% endblock title %} 
+{% block content %}
+
+<div class="student-profile mt-35 padding-lr-20">
+    <div class="row">
+        <div class="col s12 l6">
+            <div class="card student-details">
+                <div class="card-content"> 
+                 <div class="student-img">
+                   <img src="https://images.unsplash.com/photo-1623267258448-46f7eaeebbc1?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="profile-image" />
+                 </div>
+                 <h3>Student-name</h3>
+                 <table class="responsive-table">
+
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td>Rohit Raj</td>
+                      </tr>
+                      <tr>
+                        <td>Class</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>Section</td>
+                        <td>A</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                        
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l6">
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            attendance
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="teacher-img">
+                                <img src="https://images.unsplash.com/photo-1623267258448-46f7eaeebbc1?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="profile-image" />
+                              </div>
+                            Class Teacher
+                        </div>
+                    </div>
+                </div>
+                <div class="col l12">
+                    <div class="card">
+                      <div class="card-content">
+                        <table class="responsive-table striped">
+                            <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Item Name</th>
+                                  <th>Item Price</th>
+                              </tr>
+                            </thead>
+                    
+                            <tbody>
+                              <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                              </tr>
+                              <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                              </tr>
+                              <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}
