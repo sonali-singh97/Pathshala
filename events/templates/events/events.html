@@ -1,4 +1,4 @@
-{% extends './base.html' %}
+{% extends 'vpsBase/base.html' %}
 {% load static %}
 {% block title %}
 {{ block.super }}Events
@@ -12,26 +12,30 @@
         <div class="events-section item ">
             <h2 class="heading"> Year 2021 </h2>
             <div class="row events-section-cards ">
+                {% for item in events %}
                 <div class="col s12 m4">
                     <div class="card mt-50">
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                alt="event" />
+                            {% for poster in item.eventgallery_set.all %}
+                            {% if poster.mainImage%}
+                            <img src= "{{ poster.image}}"" />
+                            {% endif %}
+                            {% endfor %}
                         </div>
                         <div class="card-content d-flex  align-content-center">
                             <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                                <h2 class="date">25</h2>
-                                <span class="month">May</span>
-                                <span class="year">2021</span>
+                                <h2 class="date">{{ item.day}}</h2>
+                                <span class="month">{{ item.month}}</span>
+                                <span class="year">{{ item.year}}</span>
                             </time>
                             <div class="event-name">
-                                <h4 class="text-center"><a href="#">Interschool Science Exhibition</a></h4>
+                                <h4 class="text-center"><a href="#">{{item.name}}</a></h4>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col s12 m4">
+                {% endfor %}
+                <!-- <div class="col s12 m4">
                     <div class="card mt-50">
                         <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -86,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="events-section item ">

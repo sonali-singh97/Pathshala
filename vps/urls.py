@@ -23,10 +23,11 @@ urlpatterns = [
     path('about/', include("aboutAndStaffs.urls")),
     path('contact/', views.contact_page),
     path('joinus/', views.joinus_page),
-    path('events/', views.events_page),
-    path('event-page/', views.event_detail),
-    path('news/', views.news_page),
+    path('events/', include("events.urls")),
+    path('event-page/', include("events.urls")),
+    path('news/', include("news.urls")),
     path('resources/', views.resources_page),
-    path('addmission/', views.addmission_page, name="addmission"),
-    path('staffs/', views.staffs_page, name="staffs")
+    path('academics/', include("academics.urls")),
+    path('staffs/', views.staffs_page, name="staffs"),
+    path('student-profile/', include("student.urls"))
 ]

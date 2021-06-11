@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'vpsBase',
-    'aboutAndStaffs'
+    'aboutAndStaffs',
+    'news',
+    'events',
+    'student'
 ]
 
 MIDDLEWARE = [
