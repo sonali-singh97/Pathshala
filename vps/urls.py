@@ -29,5 +29,6 @@ urlpatterns = [
     path('resources/', views.resources_page),
     path('academics/', include("academics.urls")),
     path('staffs/', views.staffs_page, name="staffs"),
-    path('student-profile/', include("student.urls"))
+    path('student-profile/', include("student.urls")),
+     path('teacher-profile/', include("teacher.urls"))
 ]
