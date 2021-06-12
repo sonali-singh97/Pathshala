@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'aboutAndStaffs',
     'news',
     'events',
-    'student'
+    'student',
+    'teacher'
 ]
 
 MIDDLEWARE = [
