@@ -23,13 +23,13 @@
 
     <div class="about-section padding-tb-50 padding-lr-20">
       <h2 class="heading text-bold">A Few Words About School</h2>
-      <p class="mt-35"> 
+      <p class="mt-35" style="text-align: left;"> 
         {{ about_content.description }}
       </p>
 
-      <button class="btn waves-effect waves-light mt-30" type="submit" name="action">Learn More
+     <a href="{% url 'about' %}"><button class="btn waves-effect waves-light mt-30" type="submit" name="action">Learn More
         <i class="material-icons right">arrow_forward</i>
-      </button>
+      </button> </a>
     </div>
 
     <div class="news-section padding-tb-50 padding-lr-20">
@@ -71,7 +71,7 @@
           </div>
         </div>
 
-        <a href="/news"><button class="btn waves-effect waves-light mt-30" type="submit" name="action">Read More
+        <a href="{% url 'news' %}"><button class="btn waves-effect waves-light mt-30" type="submit" name="action">Read More
           <i class="material-icons right">arrow_forward</i>
         </button> </a>
       </div>
@@ -170,12 +170,11 @@
       </div>
     </div>
 
-   <a href="/events"><button class="btn waves-effect waves-light mt-30" type="submit" name="action"> View Events
+   <a href="{% url 'events' %}"><button class="btn waves-effect waves-light mt-30" type="submit" name="action"> View Events
       <i class="material-icons right">arrow_forward</i>
     </button> </a> 
   </section>
 
   </>
 
-  <script src="{% static 'js/home.js' %}"></script>
   {% endblock content %}

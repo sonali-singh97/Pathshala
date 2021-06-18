@@ -8,7 +8,7 @@
         </li>
         <li>
           <i class="fas fa-map-marker-alt"></i>
-          <a href="#">Bihar, Parsarma</a>
+          <a href="#">Gurgaon, Haryana</a>
         </li>
         <li>
           <i class="fas fa-envelope-open"></i>
@@ -22,6 +22,18 @@
     </div>
   </div>
 
+  <ul id="about-dropdown" class="dropdown-content">
+    <li><a href="{% url 'about' %}">About School</a></li>
+    <li><a href="{% url 'staffs' %}">Staffs</a></li>
+    <!-- <li><a href="#!">Join Us</a></li> -->
+  </ul>
+
+  <ul id="academics-dropdown" class="dropdown-content">
+    <li><a href="{% url 'admission' %}">Admission</a></li>
+    <li><a href="{% url 'resources' %}">Resources</a></li>
+    <!-- <li><a href="#!">Join Us</a></li> -->
+  </ul>
+
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
@@ -29,9 +41,11 @@
 
       <ul class="right hide-on-med-and-down">
         <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'admission' %}">Academics</a></li>
-        <li><a href="{% url 'event-detail' %}">Events</a></li>
+        <!-- <li><a href="{% url 'about' %}">About</a></li> -->
+        <li><a class="dropdown-trigger" href="#" data-target="about-dropdown">About</a></li>
+        <li><a class="dropdown-trigger" href="#" data-target="academics-dropdown">Academics</a></li>
+        <!-- <li><a href="{% url 'admission' %}">Academics</a></li> -->
+        <li><a href="{% url 'events' %}">Events</a></li>
         <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>

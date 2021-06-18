@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, {});
+    var sidenavInstance = M.Sidenav.init(elems);
 
     var carousel = document.querySelectorAll('.carousel');
     var instance = M.Carousel.init(carousel, {  fullWidth: true,
@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   $(document).ready(function(){
+
+    $(".dropdown-trigger").dropdown();
+
     
     let owl = $('.owl-carousel')
      owl.owlCarousel({
