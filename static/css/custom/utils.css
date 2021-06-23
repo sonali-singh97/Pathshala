@@ -58,6 +58,11 @@
    padding-bottom: 5rem ;
 }
 
+.padding-tb-30{
+  padding-top:3rem ;
+  padding-bottom: 3rem ;
+}
+
 .padding-lr-20{
    padding-left: 2rem !important;
    padding-right: 2rem !important;

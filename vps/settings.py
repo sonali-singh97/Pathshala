@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'vpsBase',
-    'aboutAndStaffs'
+    'aboutAndStaffs',
+    'news',
+    'events',
+    'student',
+    'teacher'
 ]
 
 MIDDLEWARE = [
@@ -64,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'vpsBase.context_processor.render_footer'
             ],
         },
     },
@@ -78,7 +83,7 @@ WSGI_APPLICATION = 'vps.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str (BASE_DIR / 'db.sqlite3'),
     }
 }
 

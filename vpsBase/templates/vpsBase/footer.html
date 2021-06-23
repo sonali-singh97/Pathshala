@@ -9,30 +9,30 @@
      <p class="footer-heading">Contact Us</p>
      <p style="color: grey">
         <i class="fas fa-phone" style="color: rgb(31, 30, 30)"></i
-        >&nbsp;+91 1238756740
+        >&nbsp;+91 {{ about_content.contact }}
       </p>
       <a href="mailto:contact@vps.com">
         <i class="fas fa-envelope" style="color: rgb(31, 30, 30)"></i
-        >&nbsp;&nbsp;contact@vps.com
+        >&nbsp;&nbsp;{{ about_content.email }}
       </a>
       <p style="color: grey;margin-bottom: 40px;">
         <i class="fas fa-map-marked" style="color: rgb(31, 30, 30)"></i
-        >&nbsp;&nbsp;Lorem, ipsum dolor sit amet.
+        >&nbsp;&nbsp;{{ about_content.school_address }}
       </p>
     </div>
     <div class="col s12 l4 d-flex flex-column">
         <p class="footer-heading">Social Links</p>
         <div class="flex flex-row mt-20">
-      <a href="!#" class="social-links-1">
+      <a href="{{ about_content.facebook }}" class="social-links-1">
           <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="!#" class="social-links-2" style="margin-left: 8px;">
+      <a href="{{ about_content.instagram }}" class="social-links-2" style="margin-left: 8px;">
         <i class="fab fa-instagram"></i>
     </a>
-    <a href="!#" class="social-links-3" style="margin-left: 8px;margin-right: 8px; ">
+    <a href="{{ about_content.twitter }}" class="social-links-3" style="margin-left: 8px;margin-right: 8px; ">
         <i class="fab fa-twitter "></i>
     </a>
-    <a href="!#" class="social-links-4">
+    <a href="mailto:{{ about_content.email }}" class="social-links-4">
         <i class="fab fa-google "></i>
     </a>
 </div>
