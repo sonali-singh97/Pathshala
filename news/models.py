@@ -7,6 +7,6 @@ class News(models.Model):
     day = models.IntegerField(default=0)
     month = models.IntegerField(default=0)
     year = models.IntegerField(default=0)
-    url = models.URLField()
+    pdf = models.URLField()
 
 
