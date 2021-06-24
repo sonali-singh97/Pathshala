@@ -45,7 +45,7 @@ Go to the project directory
   
 ## Screenshots
 
-![App Screenshot](./static/images/home-page.png)
+![App Screenshot](./static/images/school.png)
 
   
 ```
