@@ -33,7 +33,7 @@ over-all connectivity with school.
 Clone the project
 
 ```bash
-  git clone https://github.com/sonali-singh97/Vimal-Public-School.git
+  git clone https://github.com/sonali-singh97/Pathshala.git
 ```
 
 Go to the project directory
