@@ -16,10 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   $(document).ready(function(){
-
-    $(".dropdown-trigger").dropdown();
-
-    
+    $(".dropdown-trigger").dropdown();    
     let owl = $('.owl-carousel')
      owl.owlCarousel({
       nav: true,
@@ -28,10 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
       items:1
    })
 
-  //  $('.materialboxed').materialbox();
-
-
   });
+
   // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
  // var collapsibleElem = document.querySelector('.collapsible');
  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
