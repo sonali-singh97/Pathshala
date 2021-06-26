@@ -10,7 +10,7 @@ class Event(models.Model):
 
 
 class EventGallery(models.Model):
-    image = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="images")
     mainImage = models.BooleanField(default=False)
     event= models.ForeignKey("Event", on_delete=models.CASCADE)
 
