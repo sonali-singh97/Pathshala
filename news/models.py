@@ -1,12 +1,14 @@
 from django.db import models
 from django import forms
+import datetime
 
 class News(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
-    day = models.IntegerField(default=0)
-    month = models.IntegerField(default=0)
-    year = models.IntegerField(default=0)
-    pdf = models.URLField()
+    date =models.DateField()
+    pdf = forms.FileField()
+
+    def __str__(self):
+        return self.title
 
 

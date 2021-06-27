@@ -15,8 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy'
+        ]
+    } );
+} );
+
   $(document).ready(function(){
     $(".dropdown-trigger").dropdown();    
+
     let owl = $('.owl-carousel')
      owl.owlCarousel({
       nav: true,
