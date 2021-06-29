@@ -32,5 +32,5 @@ urlpatterns = [
     path('academics/', include("academics.urls")),
     path('staffs/', views.staffs_page, name="staffs"),
     path('student-profile/', include("student.urls")),
-     path('teacher-profile/', include("teacher.urls"))
+    path('teacher-profile/', include("teacher.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

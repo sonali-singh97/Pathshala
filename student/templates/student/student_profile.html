@@ -13,27 +13,27 @@
             <div class="card student-details">
                 <div class="card-content"> 
                  <div class="profile-img">
-                   <img src="https://images.unsplash.com/photo-1623267258448-46f7eaeebbc1?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="profile-image" />
+                   <img src={{ student.image.url }} alt="profile-image" width="60" />
                  </div>
-                 <h3>Student-name</h3>
+                 <h3>{{ student.full_name }}</h3>
                  <table class="profile-info ">
 
                     <tbody>
                       <tr>
                         <td>Name</td>
-                        <td>Rohit Raj</td>
+                        <td>{{ student.full_name }}</td>
                       </tr>
                       <tr>
                         <td>Class</td>
-                        <td>7</td>
+                        <td>{{ student.student_class_id }}</td>
                       </tr>
                       <tr>
                         <td>Section</td>
-                        <td>A</td>
+                        <td>{{ student.section }}</td>
                       </tr>
                       <tr>
                         <td>Father's name</td>
-                        <td>Mr AK singh</td>
+                        <td>{{ student.father_name }}</td>
                       </tr>
                       <tr>
                         <td>Mother's name</td>
@@ -41,11 +41,11 @@
                       </tr>
                       <tr>
                         <td>Address</td>
-                        <td>Parsarma, Bihar</td>
+                        <td>{{ student.address }}</td>
                       </tr>
                       <tr>
                         <td> Phone</td>
-                        <td> 9999999999</td>
+                        <td>{{ student.contact_number }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -59,7 +59,7 @@
                     <div class="card">
                         <div class="card-content attendance-card d-flex flex-column justify-content-center align-items-center">
                            <h4> Attendance</h4>
-                           <h1>90%</h1>
+                           <h1>{{ student.attendance }}%</h1>
                         </div>
                     </div>
                 </div>
@@ -69,11 +69,11 @@
                             <h4> Class Teacher</h4>
                             <div class="teacher-info mt-30 d-flex justify-content-center align-items-center">
                                 <div class="teacher-img">
-                                <img src="https://images.unsplash.com/photo-1623267258448-46f7eaeebbc1?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="profile-image" />
+                                <img src={{ student.student_class.class_teacher.image.url }} alt="profile-image" />
                             </div>
                               <div class="teacher-contact">
-                               <h4>Teacher name</h4>
-                               <h4>Email id</h4>
+                               <h4>{{ student.student_class.class_teacher }}</h4>
+                               <h4>{{ student.student_class.class_teacher.email }}</h4>
                               </div>
                               </div>
                         </div>
@@ -86,28 +86,22 @@
                             <table class="striped">
                                 <thead>
                                   <tr>
-                                      <th>Name</th>
-                                      <th>Item Name</th>
-                                      <th>Item Price</th>
+                                      <th>Exam</th>
+                                      <th>Obtained Marks</th>
+                                      <th>Total Marks</th>
+                                      <th>Percentage</th>
                                   </tr>
                                 </thead>
                         
                                 <tbody>
+                                {% for result in results %}
                                   <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
+                                    <td>{{ result.exam_id }}</td>
+                                    <td>{{ result.obtained_marks }}</td>
+                                    <td>{{ result.total_marks }}</td>
+                                    <td>{{ "0.00%" }}</td>
                                   </tr>
-                                  <tr>
-                                    <td>Alan</td>
-                                    <td>Jellybean</td>
-                                    <td>$3.76</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Jonathan</td>
-                                    <td>Lollipop</td>
-                                    <td>$7.00</td>
-                                  </tr>
+                                {% endfor %}
                                 </tbody>
                               </table>
                       </div>
