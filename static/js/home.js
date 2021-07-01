@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, {});
+    var sidenavInstance = M.Sidenav.init(elems);
 
     var carousel = document.querySelectorAll('.carousel');
     var instance = M.Carousel.init(carousel, {  fullWidth: true,
@@ -15,8 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy'
+        ]
+    } );
+} );
+
   $(document).ready(function(){
-    
+    $(".dropdown-trigger").dropdown();    
+
     let owl = $('.owl-carousel')
      owl.owlCarousel({
       nav: true,
@@ -25,10 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
       items:1
    })
 
-  //  $('.materialboxed').materialbox();
-
-
   });
+
   // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
  // var collapsibleElem = document.querySelector('.collapsible');
  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);

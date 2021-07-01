@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'vpsBase',
     'aboutAndStaffs',
+    'academics',
     'news',
     'events',
     'student',

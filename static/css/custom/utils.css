@@ -91,13 +91,19 @@
 button.btn {
    color : var(--bg-color);
    border: 2px solid var(--bg-color);
-   background-color: inherit;
+   background-color:#fdfdfd ;
    font-size: 1.6rem;
    box-shadow: 0 4px 8px 0 rgb(0, 0 ,0 , 0.2);
    font-weight: 700;
    padding:0.8rem 2.7rem;
    transition: all 0.3s;
    box-sizing:content-box;
+   transition: all 0.3s ease-in-out;
+}
+
+button.btn:hover{
+  color: #fdfdfd ;
+  background-color: var(--bg-color);
 }
 
 .material-icons{
