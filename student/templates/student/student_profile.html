@@ -5,17 +5,20 @@
 {% endblock title %} 
 {% block content %}
 
-<div class="profile-page padding-tb-50 padding-lr-20">
+<div class="profile-page">
     <div class="student-profile" >
-    <h3>Student Dashboard</h3>
+    <div class="d-flex flex-row w-100">
+       <h3 class="heading-student">Student Dashboard</h3>
+       <a href="{% url 'logout' %}" class="mt-35">Logout</a>
+    </div>
     <div class="row">
         <div class="col s12 l4">
             <div class="card student-details">
                 <div class="card-content"> 
-                 <div class="profile-img">
-                   <img src={{ student.image.url }} alt="profile-image" width="60" />
+                 <div class="profile-img mx-auto text-center">
+                   <img src={{ student.image.url }} alt="profile-image" />
                  </div>
-                 <h3>{{ student.full_name }}</h3>
+                 <h3 style="text-transform:uppercase;text-align:center;">{{ student.full_name }}</h3>
                  <table class="profile-info ">
 
                     <tbody>
@@ -67,8 +70,8 @@
                     <div class="card">
                         <div class="card-content teacher-card">
                             <h4> Class Teacher</h4>
-                            <div class="teacher-info mt-30 d-flex justify-content-center align-items-center">
-                                <div class="teacher-img">
+                            <div class="teacher-info mt-30 text-center">
+                                <div class="teacher-img mx-auto">
                                 <img src={{ student.student_class.class_teacher.image.url }} alt="profile-image" />
                             </div>
                               <div class="teacher-contact">

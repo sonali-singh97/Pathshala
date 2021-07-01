@@ -18,10 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from student import views as student_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("vpsBase.urls")),
+    path('login/', student_views.all_login, name='login'),
+    path('logout/', student_views.student_logout, name='logout'),
     path('about/', include("aboutAndStaffs.urls")),
     path('contact/', views.contact_page),
     path('joinus/', views.joinus_page),
