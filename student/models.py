@@ -4,7 +4,7 @@ from teacher.models import Teacher
 class Students_Class(models.Model):
     class_name = models.CharField(max_length=10)
     strength = models.IntegerField(default=0)
-    class_teacher = models.CharField(max_length=15)
+    class_teacher = models.ForeignKey(Teacher, on_delete=models.DO_NOTHING)
     tution_fees = models.IntegerField(default=0)
 
     def __str__(self):
@@ -19,6 +19,7 @@ class Class_Subject(models.Model):
     
 
 class Student(models.Model):
+    image = models.ImageField(upload_to="images", null=True)
     student_id = models.IntegerField(default=0)
     full_name = models.CharField(max_length=20)
     student_class = models.ForeignKey(Students_Class, on_delete=models.PROTECT)
@@ -29,7 +30,7 @@ class Student(models.Model):
     father_name = models.CharField(max_length=20)
     contact_number = models.IntegerField(default=0)
     address = models.CharField(max_length=50)
-    attendence = models.IntegerField(default=0)
+    attendance = models.IntegerField(default=0)
     createdBy = models.ForeignKey(Teacher, on_delete=models.PROTECT)
     createdAt = models.DateTimeField(auto_now_add=True)
 

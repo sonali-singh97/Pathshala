@@ -1,7 +1,8 @@
 from django.db import models
 
 class About(models.Model):
-    description = models.CharField(max_length=500)
+    logo = models.ImageField(upload_to="images")
+    description = models.TextField(max_length=500)
     facebook = models.URLField(null=True)
     instagram = models.URLField(null=True)
     twitter = models.URLField(null=True)

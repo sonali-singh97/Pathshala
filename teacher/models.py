@@ -1,6 +1,7 @@
 from django.db import models
 
 class Teacher(models.Model):
+    image = models.ImageField(upload_to="images")
     teacher_id = models.IntegerField(default=0, unique=True)
     full_name = models.CharField(max_length=20)
     email = models.EmailField()

@@ -18,10 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from student import views as student_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("vpsBase.urls")),
+    path('login/', student_views.all_login, name='login'),
+    path('logout/', student_views.student_logout, name='logout'),
     path('about/', include("aboutAndStaffs.urls")),
     path('contact/', views.contact_page),
     path('events/', include("events.urls")),
@@ -29,5 +32,5 @@ urlpatterns = [
     path('academics/', include("academics.urls")),
     path('staffs/',include("aboutAndStaffs.urls")) ,
     path('student-profile/', include("student.urls")),
-     path('teacher-profile/', include("teacher.urls"))
+    path('teacher-profile/', include("teacher.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
