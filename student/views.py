@@ -36,3 +36,6 @@ def all_login(request):
 def student_logout(request):
     logout(request)
     return HttpResponseRedirect('/login/')
+
+def register_students(request):
+    return render(request, 'student/register_student.html')

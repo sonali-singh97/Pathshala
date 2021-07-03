@@ -1,0 +1,32 @@
+{% extends 'vpsBase/base.html' %}
+{% load static %}
+{% block title %}
+{{ block.super }}Student Login
+{% endblock title %} 
+{% block content %}
+
+<div class="container" style="margin-top:80px; margin-bottom:70px;">
+    <div class="row justify-content-center">
+        <div class="col s12 m4"></div>
+        <div class="col s12 m4 d-flex flex-column">
+             <h3>Login</h3>
+             <form action="" method="post">
+             {% csrf_token %}
+                <input list="students">
+                <datalist id="students">
+                    <option value="stu_1">
+                    <option value="stu_2">
+                    <option value="stu_3">
+                    <option value="stu_4">
+                    <option value="stu_4">
+                    <option value="stu_4">
+                    <option value="stu_4">
+                </datalist>
+             <button type="submit" class="btn-block btn">Register</button>
+             </form>
+        </div>
+        <div class="col s12 m4"></div>
+    </div>
+</div>
+
+{% endblock content %}
