@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Class_Subject, Students_Class, Student, SubjectResult, Exam, FinalResult
+from .models import Class_Subject, Students_Class, Student, SubjectResult, Exam, FinalResult,  Fee_Type, Fee_Transaction, Payment
 
 class ClassSubjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'class_id')
@@ -30,3 +30,7 @@ class ExamAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
 
 admin.site.register(Exam, ExamAdmin)
+admin.site.register(Fee_Type)
+admin.site.register(Fee_Transaction)
+admin.site.register(Payment)
+
