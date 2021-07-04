@@ -111,5 +111,41 @@ button.btn:hover{
     font-size: 1.6rem;
 }
 
+textarea.input-field-box, input.input-field-box{
+  box-sizing: border-box !important;
+  border: 1px solid #b1b1b1 !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  
+}
+
+input.input-field-box{
+  height: 4rem !important;
+}
+
+textarea.input-field-box{
+  height: unset !important;
+}
+
+.input-field>label {
+  left: 1.5rem !important;
+  font-size: 1.4rem;
+}
+
+.input-field>label:not(.label-icon).active{
+  transform: translateY(-1.8rem) scale(0.9) !important;
+  left: 0.8rem !important;
+  color: #9d2d35 !important;
+}
+
+textarea.input-field-box:focus ,input.input-field-box:focus{
+  border-bottom : 1px solid #9d2d35 !important;
+  -webkit-box-shadow: 0 1px 0 0 #9D2D35 !important;
+  box-shadow: 0 1px 0 0 #9D2D35 !important;
+  outline: none !important;
+
+}
+
+
 
 
