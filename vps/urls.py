@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include("vpsBase.urls")),
     path('login/', student_views.all_login, name='login'),
     path('logout/', student_views.student_logout, name='logout'),
+    path('register/', student_views.register_students, name='register_students'),
     path('about/', include("aboutAndStaffs.urls")),
     path('contact/', views.contact_page),
     path('events/', include("events.urls")),
