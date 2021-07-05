@@ -68,13 +68,10 @@ div.carousel .carousel-item img {
     margin-right: 2rem;
 }
 
-.news-card h2 {
-    margin: 0;
-}
 
-.news-date p {
+/* .news-date p {
     margin: 0;
-}
+} */
 
 
 /* Message Section */
@@ -95,9 +92,8 @@ div.carousel .carousel-item img {
 
 .message-body {
     position: relative;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-style: italic;
-    font-weight: bold;
 }
 
 .message-section cite {
@@ -125,16 +121,17 @@ div.carousel .carousel-item img {
     background-color: inherit;
     border: 1px solid #ccc;
     color: #696a6d;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
     text-transform: uppercase;
 }
 
 .date-card .date {
     margin: 0;
-    margin-bottom: -0.8rem;
+    margin-bottom: -0.8rem !important;
     color: var(--bg-color);
+    font-size: 4rem;
 }
 
 /* Events section */
@@ -167,6 +164,10 @@ div.carousel .carousel-item img {
     flex: 1;
 }
 
+.event-name a{
+    color : #301A4B;
+}
+
 
 /* owl carousel */
 
@@ -196,10 +197,13 @@ top:8.5rem;
         align-items: center;
         background-color: var(--bg-color);
         color: #fff;
-        padding: 0.5rem 5rem;
+        padding: 1.2rem 5rem;
         font-size: 1.4rem;
     }
-
+    
+    .navbar-top-panel ul {
+        margin:0;
+    }
     .navbar-top-panel-left ul li {
         list-style: none;
         display: inline-block;
@@ -227,7 +231,6 @@ top:8.5rem;
     div.carousel.carousel-slider {
        height: 60vh;
         /* height: calc(100vh - 150px); */
-
     }
 
     .nav-wrapper ul a,
@@ -238,19 +241,18 @@ top:8.5rem;
     }
 
     .info-section {
-        padding: 5rem 8rem;
+        padding: 5rem 0;
         display: flex;
         justify-content: space-around;
         align-content: center;
     }
 
     .message-section {
-        padding: 8rem 10rem !important;
+        padding: 8rem 0 !important;
     }
 
-
     .message-body {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
 
     .message-section .position {
@@ -258,11 +260,11 @@ top:8.5rem;
     }
 
     .events-section{
-       padding:8rem !important;
+       padding:8rem  0!important;
    }
 
    .events-section-cards{
-       padding: 3rem 5rem ;
+       padding: 3rem 0 ;
    }
    
    .events-section-cards .card{
