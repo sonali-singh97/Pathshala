@@ -24,7 +24,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-r9bn^b-kj2b5%1@3@o-&2v@_@9-8@hllteorhy*8b&uid$3=%m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["vps-bihar.herokuapp.com", "localhost", "127.0.0.1"]
 
@@ -126,11 +126,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR]
-STATIC_ROOT = BASE_DIR / 'static'
+# STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "uploads"
 
