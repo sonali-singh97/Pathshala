@@ -1,11 +1,34 @@
+
+const autoplay = () => {
+      
+  let indicatorItems = document.querySelectorAll('.carousel .indicator-item'),
+  slideTime = 3000,
+  activeClass = "active";
+  setInterval(() => {
+    indicatorItems.forEach(el => {
+      if (el.classList.contains(activeClass)) {
+        sib = el.nextElementSibling;
+        if (sib == null) {
+          indicatorItems[0].click();
+        } else {
+          sib.click()
+        }
+      }
+    });
+  }, slideTime);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var sidenavInstance = M.Sidenav.init(elems);
 
     var carousel = document.querySelectorAll('.carousel');
-    var instance = M.Carousel.init(carousel, {  fullWidth: true,
+    var instance = M.Carousel.init(carousel, { 
+      fullWidth: true,
       indicators: true});
 
+     autoplay()
+  
    var materialBox = document.querySelectorAll('.materialboxed');
    var materialBoxInstance = M.Materialbox.init(materialBox, {});
 
