@@ -3,13 +3,19 @@
 margin-top: 0;
 }
 
+.resources{
+  flex-wrap: wrap;
+}
 .resources .card {
-    background-color: #D7ABAE;
+    /* background-color: #D7ABAE; */
+    background-color: #301a4b88;
     min-width: 30rem;
+    margin: 2rem;
+    color: #fff;
 }
 
 .resources .card-action a{
-  color: #9D2D35 !important;
+  /* color: #9d2d355e !important; */
   font-weight: 500;
   font-size: 1.4rem;
 }
