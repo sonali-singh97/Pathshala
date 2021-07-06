@@ -3,16 +3,16 @@
 {{ block.super }}Contact
 {% endblock title %} 
 {% block content %}
-    <div class="container">
+    <div class="container padding-tb-50">
       <div class="row">
-        <div class="col s12 m8 d-flex flex-column">
+        <div class="col s12 m8  d-flex flex-column">
           <h2 class="heading text-center">Get in Touch</h2>
           <p class="contact-desc">
             You can contact us anyway that is convinent to you. We would be
             happy to answer your questions
           </p>
           <div class="d-flex flex-column">
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row ">
               <div class="input-field col s6">
               <label for="first_name">First Name</label>
                 <input id="first_name" type="text" class="input-field-box" />
@@ -38,13 +38,13 @@
               <label for="message">Message</label>
             </div>
 
-            <button class="btn waves-effect waves-light mt-30" type="submit" style="max-width: 10rem;" name="action"> 
+            <button class="btn waves-effect waves-light " type="submit" style="max-width: 10rem;" name="action"> 
               Send Message
               <i class="material-icons right">arrow_forward</i>
             </button>
           </div>
         </div>
-        <div class="col s12 m4 contact-info">
+        <div class="col s12 offset-m1 m3 contact-info">
           <div class="f-flex flex-column">
             <p class="contact-info-heading">Phones</p>
             <p style="color: grey">

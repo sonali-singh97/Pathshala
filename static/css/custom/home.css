@@ -153,6 +153,7 @@ div.carousel .carousel-item img {
     background-color: var(--bg-color);
     border: none;
     color: #ffe894;
+    margin-right: 2rem;
 
 }
 
@@ -238,6 +239,10 @@ top:8.5rem;
         font-size: 1.6rem;
         color: var(--font-color);
         
+    }
+
+    .nav-wrapper ul .dropdown-content{
+        top: -7rem;
     }
 
     .info-section {

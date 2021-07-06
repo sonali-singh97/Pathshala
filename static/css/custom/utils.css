@@ -28,6 +28,10 @@
   text-align: center ;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .mt-50 {
     margin-top: 5rem;
 }
@@ -95,7 +99,7 @@ button.btn {
    font-size: 1.6rem;
    box-shadow: 0 4px 8px 0 rgb(0, 0 ,0 , 0.2);
    font-weight: 700;
-   padding:0.8rem 2.7rem;
+   padding:0.5rem 1.5rem;
    transition: all 0.3s;
    box-sizing:content-box;
    transition: all 0.3s ease-in-out;
@@ -121,10 +125,12 @@ textarea.input-field-box, input.input-field-box{
 
 input.input-field-box{
   height: 4rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 textarea.input-field-box{
   height: unset !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .input-field>label {
@@ -143,6 +149,7 @@ textarea.input-field-box:focus ,input.input-field-box:focus{
   -webkit-box-shadow: 0 1px 0 0 #9D2D35 !important;
   box-shadow: 0 1px 0 0 #9D2D35 !important;
   outline: none !important;
+ 
 
 }
 
