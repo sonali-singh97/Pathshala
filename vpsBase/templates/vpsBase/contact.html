@@ -11,30 +11,37 @@
             You can contact us anyway that is convinent to you. We would be
             happy to answer your questions
           </p>
+          {% if success_msg %}
+            <div>
+             <strong style="color:green;">{{ success_msg }}</strong>
+            </div>
+          {% endif %}
           <div class="d-flex flex-column">
-            <div class="d-flex flex-row ">
+             <form action="" method="POST">
+             {% csrf_token %}
+            <div class="d-flex flex-row">
               <div class="input-field col s6">
               <label for="first_name">First Name</label>
-                <input id="first_name" type="text" class="input-field-box" />
+                {{ form.first_name }}
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="input-field-box" />
+                {{form.last_name}}
                 <label for="last_name">Last Name</label>
               </div>
             </div>
 
             <div class="d-flex flex-row">
               <div class="input-field col s6">
-                <input id="email" type="text" class="input-field-box" />
+                {{form.email}}
                 <label for="email">Email</label>
               </div>
               <div class="input-field col s6">
-                <input id="phone" type="text" class="input-field-box" />
+                {{form.contact}}
                 <label for="phone">Phone</label>
               </div>
             </div>
             <div class="input-field col s12">
-              <textarea id="message" rows="10" cols="50"class="input-field-box"></textarea>
+              {{form.message}}
               <label for="message">Message</label>
             </div>
 
@@ -42,6 +49,7 @@
               Send Message
               <i class="material-icons right">arrow_forward</i>
             </button>
+             </form>
           </div>
         </div>
         <div class="col s12 offset-m1 m3 contact-info">
