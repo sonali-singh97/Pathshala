@@ -110,6 +110,17 @@ button.btn:hover{
   background-color: var(--bg-color);
 }
 
+.btn-red {
+  background-color: var(--bg-color) !important;
+  color: #fff !important;
+} 
+
+.btn-red:hover{
+  color:var(--bg-color) !important;
+  background-color: #fff !important;
+  border:2px solid #fff !important;
+}
+
 .material-icons{
     font-weight: bold;
     font-size: 1.6rem;

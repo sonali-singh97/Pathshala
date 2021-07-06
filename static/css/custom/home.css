@@ -30,6 +30,10 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
     line-height: 3.2 !important;
 }
 
+div.carousel{
+position: relative;
+}
+
 div.carousel.carousel-slider {
     /* margin-top: 39px; */
     height: calc(100vh - 50px);
@@ -43,7 +47,35 @@ div.carousel .carousel-item img {
     object-position: 0 0;
 }
 
+div.carousel .container {
+    justify-content: center;
+    align-items: center;
+}
 
+div.carousel-overlay .carousel-heading{
+color: #fff;
+}
+
+div.carousel .carousel-overlay{
+position: absolute;
+top: 0;
+left:0;
+width:100%;
+height:100%;
+z-index: 10;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) );
+color: #fff;
+}
+
+/* About section */
+
+div .about-section {
+    text-align: center;
+}
 
 /* Latest news section */
 
@@ -68,16 +100,14 @@ div.carousel .carousel-item img {
     margin-right: 2rem;
 }
 
-
-/* .news-date p {
-    margin: 0;
-} */
-
-
 /* Message Section */
 
 .message-section {
     color: #fff;
+}
+
+.meassage-section.image{
+    text-align: center;
 }
 
 .message-section img {
@@ -231,8 +261,19 @@ top:8.5rem;
 
     div.carousel.carousel-slider {
        height: 60vh;
-        /* height: calc(100vh - 150px); */
     }
+
+    div.carousel .container {
+        justify-content:start;
+        align-items: baseline;
+    }
+
+    div.carousel .carousel-overlay{
+        justify-content: start;
+        align-items: center;
+        text-align: left;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) );
+        }
 
     .nav-wrapper ul a,
     .brand-logo {
@@ -243,6 +284,17 @@ top:8.5rem;
 
     .nav-wrapper ul .dropdown-content{
         top: -7rem;
+        background-color: #9D2D35;
+    }
+
+    .nav-wrapper ul .dropdown-content li a{
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .dropdown-content li a:hover , .dropdown-content li a:active{
+        opacity: 1;
+        background-color: #9D2D35;
     }
 
     .info-section {

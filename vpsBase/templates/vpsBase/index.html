@@ -8,21 +8,31 @@
 <div class="page ">
 
   <div class="carousel carousel-slider slideshow" data-indicators="true">
-    <a class="carousel-item" href="#one!"><img
-        src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwY2hpbGRyZW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
+    <a class="carousel-item" href="#one!">
+    <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwY2hpbGRyZW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#two!"><img
         src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#three!"><img
         src="https://images.unsplash.com/photo-1495727034151-8fdc73e332a8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
     <a class="carousel-item" href="#four!"><img
         src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNjaG9vbCUyMGNoaWxkcmVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></a>
+
+    <div class="carousel-overlay">
+    <div class="container d-flex flex-column">
+    <h1 class="carousel-heading">Vimal Public School</h1>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo illo.</p>
+     <a href="{% url 'about' %}"><button class=" btn btn-red waves-effect waves-light mt-30" type="submit" name="action">Learn More
+        <i class="material-icons right">arrow_forward</i>
+      </button> </a>
+    </div>
+    </div>
   </div>
 
 
   <section class="container info-section  text-center">
     <div class="about-section padding-tb-50 ">
-      <h2 class="heading text-left ">A Few Words About School</h2>
-      <p class="mt-35" style="text-align: left;"> 
+      <h2 class="heading ">A Few Words About School</h2>
+      <p class="mt-35" > 
         {{ about_content.description }}
       </p>
 
@@ -80,7 +90,7 @@
   <section class="message-section bg-pattern padding-tb-50 ">
     <div class="container row">
       <div class="col s12 m4">
-        <div>
+        <div class="image">
           <img
             src="https://livedemo00.template-help.com/wt_prod-16603/learner/images/users/user-steven-alvarez-230x230.jpg"
             alt="principal" />
