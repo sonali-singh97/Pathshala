@@ -1,27 +1,64 @@
 {% extends 'vpsBase/base.html' %}
-{% load static %}
 {% block title %}
 {{ block.super }}Resources
-{% endblock title %} 
+{% endblock title %}
 {% block content %}
 
 <div class="resources-page text-center padding-lr-20 padding-tb-50">
   <h2 class="heading">Resources</h2>
- 
-  <div class="resources mt-35">
-  <div class="card-panel resources-card">
-  <a target="_blank" href="http://www.uietkuk.org/uploads/academiccalender.pdf"> <h3>Academic Calender</h3> </a>
-  </div>
-  <div class="card-panel resources-card">
-    <a target="_blank" href="http://www.uietkuk.org/uploads/academiccalender.pdf"> <h3>Time Table</h3> </a>
-   </div>
-   <div class="card-panel resources-card">
-    <a target="_blank" href="http://www.uietkuk.org/uploads/academiccalender.pdf"> <h3>Datesheet</h3> </a>
-   </div>
-   <div class="card-panel resources-card">
-    <a target="_blank" href="http://www.uietkuk.org/uploads/academiccalender.pdf"> <h3>Syllabus</h3> </a>
-   </div>
-</div>
-</div>
 
-{% endblock content %}
+<div class="container">
+  <div class="resources d-flex flex-column mt-35">
+    {% comment %} <div class="card-panel resources-card">
+      <a
+        target="_blank"
+        href="http://www.uietkuk.org/uploads/academiccalender.pdf"
+      >
+        <h3>Academic Calender</h3>
+      </a>
+    </div>
+    {% endcomment %}
+    
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Academic Calender</span>
+        <p>2021 List of holidays</p>
+      </div>
+      <div class="card-action">
+        <a href="#" >
+            Download
+        </a>
+      </div>
+      </div>
+
+         <div class="card">
+      <div class="card-content">
+        <span class="card-title">Card Title</span>
+        <p>I am a very simple card. .</p>
+      </div>
+      <div class="card-action">
+        <a href="#" >
+            Download
+        </a>
+      </div>
+      </div>
+
+         <div class="card">
+      <div class="card-content">
+        <span class="card-title">Card Title</span>
+        <p>I am a very simple card. .</p>
+      </div>
+      <div class="card-action">
+        <a href="#" >
+            Download
+        </a>
+      </div>
+      </div>
+      
+    </div>
+
+ 
+  </div>
+</div>
+</div>
+   {% endblock content %}
