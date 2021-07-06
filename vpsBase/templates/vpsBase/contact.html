@@ -13,13 +13,13 @@
           </p>
           {% if success_msg %}
             <div>
-             <p>{{ success_msg }}</p>
+             <strong style="color:green;">{{ success_msg }}</strong>
             </div>
           {% endif %}
           <div class="d-flex flex-column">
-            <div class="d-flex flex-row">
              <form action="" method="POST">
              {% csrf_token %}
+            <div class="d-flex flex-row">
               <div class="input-field col s6">
               <label for="first_name">First Name</label>
                 {{ form.first_name }}
