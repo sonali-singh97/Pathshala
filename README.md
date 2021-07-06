@@ -15,10 +15,9 @@ over-all connectivity with school.
 - Central secure database structure that organizes, stores and retrieves real-time information
 - Dedicated portal for students, teachers and principal.
 - Exam schedules and performance records
-- Student Attendance records
 - Learning resources access.
 - Latest announcements and events 
-- Manage fees info (paid/due)
+- Responsive web pages
 
   
 ## Tech Stack
