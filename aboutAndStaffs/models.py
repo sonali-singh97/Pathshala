@@ -9,6 +9,7 @@ class About(models.Model):
     email = models.EmailField(null=True)
     contact = models.IntegerField(default=0)
     school_address = models.CharField(max_length=20, null=True)
+    about_video = models.FileField(upload_to="video")
 
     def __str__(self):
         return self.email
