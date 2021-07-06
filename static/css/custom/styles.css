@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6{
   line-height: 1.5;
   font-family: "Poppins";
   color: #111;
+  font-weight: 600;
 }
 
 h1 {
@@ -122,9 +123,12 @@ input {
 }
 
 @media screen and (min-width: 601px) {
-h2{
-  font-size: 4.4rem;
+h1{
+  font-size: 5rem;
 }
+/* h2{
+  font-size: 4.4rem;
+} */
 p{
   font-size: 1.6rem;;
 }
