@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import Student, FinalResult
+from .models import Student, FinalResult, SubjectResult, Exam
 # from .models import FinalResult
 from .forms import LoginForm
 from django.contrib.auth import authenticate, login, logout
@@ -31,6 +31,10 @@ def all_login(request):
             student_login = LoginForm()
         return render(request, 'student/login.html', {'login_form': student_login})
     else:
+        if request.user == 'admin':
+            logout(request)
+            student_login = LoginForm()
+            return render(request, 'student/login.html', {'login_form': student_login})
         return HttpResponseRedirect('/student-profile/' + str(request.user) + '/')
 
 def student_logout(request):
@@ -39,3 +43,16 @@ def student_logout(request):
 
 def register_students(request):
     return render(request, 'student/register_student.html')
+
+def result(request, id, exam_id):
+    if request.user.is_authenticated:
+        student = Student.objects.get(pk=id)
+        results = FinalResult.objects.filter(student_id=id).order_by('-id')
+        one_result = SubjectResult.objects.filter(student_id=id).filter(exam_id=exam_id)
+        xam = Exam.objects.get(pk=exam_id)
+        if student:
+            return render(request, 'student/student_profile.html', {'student': student, 'results': results, 'one_result': one_result, 'exam': xam })
+        else:
+            return HttpResponseRedirect('/')
+    else:
+        return HttpResponseRedirect('/login/')
