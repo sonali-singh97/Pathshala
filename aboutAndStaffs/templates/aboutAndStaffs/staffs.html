@@ -5,158 +5,28 @@
 {% endblock title %}
 {% block content %}
 <div class="container">
-        <h2 class="heading text-center">Meeting of Minds</h2>
+        <h2 class="heading text-center">Our Staffs</h2>
     <div class="row justify-content-center mt-30">
-        <div class="col m3 s12">
+        {% if teachers %}
+          {% for teacher in teachers %}
+            <div class="col m3 s12">
             <div class="card">
             <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
+              <img src="{{teacher.image.url}}" />
             </div>
             <div class="card-content d-flex flex-column" style="padding: 12px">
               <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
+               {{teacher.full_name}}
               </h5>
               <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
+                {{teacher.designation}}, VPS
               </p>
             </div>
           </div>
         </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/user.png' %}" />
-            </div>
-            <div class="card-content d-flex flex-column" style="padding: 12px">
-              <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
-                Dr. Rajat Sharma
-              </h5>
-              <p style="color: grey; margin-left: 2px">
-                Principal and Director, VPS
-              </p>
-            </div>
-          </div>
-        </div>
+          {% endfor %}
+        {% endif %}
+        
     </div>
 </div>
 {% endblock content %}

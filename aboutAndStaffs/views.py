@@ -11,4 +11,5 @@ def joinUs(request):
     return render(request, 'aboutAndStaffs/joinUs.html')
 
 def staffs(request):
-    return render(request, 'aboutAndStaffs/staffs.html')
+    teacher = Teacher.objects.all()
+    return render(request, 'aboutAndStaffs/staffs.html', {'teachers': teacher})
