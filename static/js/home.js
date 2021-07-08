@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 } );
 
   $(document).ready(function(){
-  //  $(".dropdown-trigger").dropdown();    
+     
 
     let owl = $('.owl-carousel')
      owl.owlCarousel({
@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
       paginationSpeed : 200,
       items:1
    })
+
+    $(".dropdown-trigger").dropdown(); 
 
   });
 

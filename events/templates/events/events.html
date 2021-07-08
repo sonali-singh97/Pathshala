@@ -5,14 +5,14 @@
 {% endblock title %}
 {% block content %}
 
-<div class="page text-center">
-
+<div class="container text-center">
     <div class="owl-carousel owl-theme padding-lr-20">
-       {% comment %} {} {% endcomment %}
+       {% for i in year_list %}
         <div class="events-section item ">
-            <h2 class="heading"> Year 2021 </h2>
+            <h2 class="heading"> Year {{i}} </h2>
             <div class="row events-section-cards ">
                 {% for item in events %}
+                   {% if item.year ==  i%}
                 <div class="col s12 m4">
                     <div class="card mt-50">
                         <div class="card-image">
@@ -29,102 +29,16 @@
                                 <span class="year">{{ item.year}}</span>
                             </time>
                             <div class="event-name">
-                                <h4 class="text-left"><a href="#">{{item.name}}</a></h4>
+                                <h4 class="text-left"><a href="/events/event-detail/{{item.id}}">{{item.name}}</a></h4>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
-        {% comment %} {% endfor %} {% endcomment %}
-        <div class="events-section item ">
-            <h2 class="heading"> Year 2019 </h2>
-            <div class="row events-section-cards">
-                <div class="col s12 m4">
-                    <div class="card mt-50">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                alt="event" />
-                        </div>
-                        <div class="card-content d-flex  align-content-center">
-                            <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                                <h2 class="date">25</h2>
-                                <span class="month">May</span>
-                                <span class="year">2021</span>
-                            </time>
-                            <div class="event-name">
-                                <h4 class="text-left"><a href="#">Interschool Science Exhibition</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card mt-50">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                alt="event" />
-                        </div>
-                        <div class="card-content d-flex  align-content-center">
-                            <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                                <h2 class="date">25</h2>
-                                <span class="month">May</span>
-                                <span class="year">2021</span>
-                            </time>
-                            <div class="event-name">
-                                <h4 class="text-center"><a href="#">Interschool Science Exhibition</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="events-section item ">
-            <h2 class="heading"> Year 2018 </h2>
-            <div class="row events-section-cards">
-                <div class="col s12 m4">
-                    <div class="card mt-50">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                alt="event" />
-                        </div>
-                        <div class="card-content d-flex  align-content-center">
-                            <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                                <h2 class="date">25</h2>
-                                <span class="month">May</span>
-                                <span class="year">2021</span>
-                            </time>
-                            <div class="event-name">
-                                <h4 class="text-center"><a href="#">Interschool Science Exhibition</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card mt-50">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                alt="event" />
-                        </div>
-                        <div class="card-content d-flex  align-content-center">
-                            <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                                <h2 class="date">25</h2>
-                                <span class="month">May</span>
-                                <span class="year">2021</span>
-                            </time>
-                            <div class="event-name">
-                                <h4 class="text-center"><a href="#">Interschool Science Exhibition</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        {% endfor %}
 
     </div>
 

@@ -15,7 +15,7 @@ class Event(models.Model):
     def month(self):
         return self.date.strftime('%b')
 
-    def year(self):
+    def getYear(self):
         return self.date.strftime('%Y')
 
 
