@@ -20,7 +20,13 @@ const autoplay = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
+    console.log(elems)
     var sidenavInstance = M.Sidenav.init(elems);
+
+    // document.getElementsByClassName(".sidenav-trigger")[0].addEventListener("click", function(){
+    //   // console.log("sidenav")
+    //   sidenavInstance.open()
+    // });
 
     var carousel = document.querySelectorAll('.carousel');
     var instance = M.Carousel.init(carousel, { 
@@ -48,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 } );
 
   $(document).ready(function(){
-    $(".dropdown-trigger").dropdown();    
+     
 
     let owl = $('.owl-carousel')
      owl.owlCarousel({
@@ -58,10 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
       items:1
    })
 
+    $(".dropdown-trigger").dropdown(); 
+
   });
 
-  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
- // var collapsibleElem = document.querySelector('.collapsible');
- // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
 
  
