@@ -209,14 +209,21 @@ div.owl-dots{
 .owl-nav {
 position:absolute;
 top:8.5rem;
+clear: both;
+width: 100%;
+z-index:1;
+/* transform: translateX(-50%);
+margin-left: 40%; */
 }
 
 .owl-carousel .owl-prev {
-    left: -35px;
+    position: absolute;
+    left: 30%;
   }
   
   .owl-carousel .owl-next {
-    right: -35px;
+      position: absolute;
+    right: 30%;
   }
 
 
@@ -303,7 +310,20 @@ top:8.5rem;
         justify-content: space-around;
         align-content: center;
     }
+    
+    .info-section .about-section {
+        text-align: left !important;
+        padding-right: 2rem;
+    }
 
+    .info-section .news-section {
+        text-align: left !important;
+        padding-right: 2rem;
+    }
+
+    .info-section .heading:after{
+        margin-left:0;
+    }
     .message-section {
         padding: 8rem 0 !important;
     }

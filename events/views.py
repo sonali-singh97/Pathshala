@@ -4,7 +4,8 @@ from events.models import Event, EventGallery
 def events(request):
     events_data = Event.objects.all()
     event_gallery = EventGallery.objects.all()
-    print("db data")
+    # events_year = Event.objects.filter(year)
+    print(events_data)
     return render(request, 'events/events.html', { 'events': events_data , 'event_images' : event_gallery })
 
 # def events(request):

@@ -8,7 +8,7 @@
 <div class="page text-center">
 
     <div class="owl-carousel owl-theme padding-lr-20">
-
+       {% comment %} {} {% endcomment %}
         <div class="events-section item ">
             <h2 class="heading"> Year 2021 </h2>
             <div class="row events-section-cards ">
@@ -18,7 +18,7 @@
                         <div class="card-image">
                             {% for poster in item.eventgallery_set.all %}
                             {% if poster.mainImage%}
-                            <img src= "{{ poster.image}}" />
+                            <img src= "{{ poster.image.url}}" />
                             {% endif %}
                             {% endfor %}
                         </div>
@@ -29,7 +29,7 @@
                                 <span class="year">{{ item.year}}</span>
                             </time>
                             <div class="event-name">
-                                <h4 class="text-center"><a href="#">{{item.name}}</a></h4>
+                                <h4 class="text-left"><a href="#">{{item.name}}</a></h4>
                             </div>
                         </div>
                     </div>
@@ -37,6 +37,7 @@
                 {% endfor %}
             </div>
         </div>
+        {% comment %} {% endfor %} {% endcomment %}
         <div class="events-section item ">
             <h2 class="heading"> Year 2019 </h2>
             <div class="row events-section-cards">
@@ -53,7 +54,7 @@
                                 <span class="year">2021</span>
                             </time>
                             <div class="event-name">
-                                <h4 class="text-center"><a href="#">Interschool Science Exhibition</a></h4>
+                                <h4 class="text-left"><a href="#">Interschool Science Exhibition</a></h4>
                             </div>
                         </div>
                     </div>
