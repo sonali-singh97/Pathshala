@@ -9,55 +9,23 @@
 
 <div class="container">
   <div class="resources d-flex flex-column mt-35">
-    {% comment %} <div class="card-panel resources-card">
-      <a
-        target="_blank"
-        href="http://www.uietkuk.org/uploads/academiccalender.pdf"
-      >
-        <h3>Academic Calender</h3>
-      </a>
-    </div>
-    {% endcomment %}
-    
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">Academic Calender</span>
-        <p>2021 List of holidays</p>
+    {% if resources %}
+    {% for resource in resources %}
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">{{resource.title}}</span>
+          <p>{{resource.description}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{resource.pdf.url}}" download>
+              Download
+          </a>
+        </div>
       </div>
-      <div class="card-action">
-        <a href="#" >
-            Download
-        </a>
-      </div>
-      </div>
-
-         <div class="card">
-      <div class="card-content">
-        <span class="card-title">Card Title</span>
-        <p>I am a very simple card. .</p>
-      </div>
-      <div class="card-action">
-        <a href="#" >
-            Download
-        </a>
-      </div>
-      </div>
-
-         <div class="card">
-      <div class="card-content">
-        <span class="card-title">Card Title</span>
-        <p>I am a very simple card. .</p>
-      </div>
-      <div class="card-action">
-        <a href="#" >
-            Download
-        </a>
-      </div>
-      </div>
-      
-    </div>
-
- 
+    {% endfor %}
+    {% else %}
+      <p>Please add resources...</p>
+    {% endif %}
   </div>
 </div>
 </div>

@@ -105,6 +105,18 @@ button.btn {
    transition: all 0.3s ease-in-out;
 }
 
+.select2 {
+  width: 100% !important;
+  margin-bottom: 10px !important;
+}
+
+.select2-search__field {
+  border-bottom : 1px solid #9d2d35 !important;
+  -webkit-box-shadow: 0 1px 0 0 #9D2D35 !important;
+  box-shadow: 0 1px 0 0 #9D2D35 !important;
+  outline: none !important
+}
+
 button.btn:hover{
   color: #fdfdfd ;
   background-color: var(--bg-color);

@@ -59,10 +59,11 @@ class SubjectResult(models.Model):
 class FinalResult(models.Model):
     student_id = models.ForeignKey(Student, on_delete=models.PROTECT)
     exam_id = models.ForeignKey(Exam, on_delete=models.DO_NOTHING)
+    class_id = models.ForeignKey(Students_Class, on_delete=models.DO_NOTHING)
     obtained_marks = models.PositiveSmallIntegerField(default=0)
     total_marks = models.PositiveSmallIntegerField(default=0)
     percentage = models.PositiveSmallIntegerField(default=0) 
-    createdBy = models.CharField(max_length=20)
+    createdBy = models.ForeignKey(Teacher, on_delete=models.DO_NOTHING)
     createdAt = models.DateTimeField()
 
 # class Fees(models.Model):

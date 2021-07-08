@@ -90,6 +90,7 @@
                                 <thead>
                                   <tr>
                                       <th>Exam</th>
+                                      <th>Class</th>
                                       <th>Obtained Marks</th>
                                       <th>Total Marks</th>
                                       <th>Percentage</th>
@@ -99,7 +100,8 @@
                                 <tbody>
                                 {% for result in results %}
                                   <tr>
-                                    <td>{{ result.exam_id }}</td>
+                                    <td><a href="/student-profile/{{student.id}}/{{result.id}}">{{ result.exam_id }}</a></td>
+                                    <td>{{ result.class_id }}</td>
                                     <td>{{ result.obtained_marks }}</td>
                                     <td>{{ result.total_marks }}</td>
                                     <td>{{ "0.00%" }}</td>
@@ -112,8 +114,39 @@
                 </div>
               </div>
         </div>
+        {% if one_result %}
+            <div class="col s12">
+            <div class="card">
+            <div class="card-content">
+                <h4>{{exam.title}}</h4>
+                  <table id="example" class="display">
+                      <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Class</th>
+                            <th>Obtained Marks</th>
+                            <th>Total Marks</th>
+                        </tr>
+                      </thead>
+              
+                      <tbody>
+                      {% for res in one_result %}
+                        <tr>
+                          <td>{{res.subject_id}}</td>
+                          <td>{{res.class_id}}</td>
+                          <td>{{res.obtained_marks}}</td>
+                          <td>{{res.total_marks}}</td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+              </div>
+            </div>
+          </div>
+        {% endif %}
       </div>
 </div>
 </div>
+
 
 {% endblock content %}
