@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import Student, FinalResult, SubjectResult, Exam
-# from .models import FinalResult
 from .forms import LoginForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.base_user import BaseUserManager
 
 def student_page(request, id):
     if request.user.is_authenticated:
@@ -42,7 +43,27 @@ def student_logout(request):
     return HttpResponseRedirect('/login/')
 
 def register_students(request):
-    return render(request, 'student/register_student.html')
+    if request.user.is_authenticated:
+        if request.user.is_staff:
+            if request.method == "POST":
+                username = request.POST['username']
+                stu = Student.objects.get(pk=username)
+                password = BaseUserManager().make_random_password(8, f"{username}{stu.full_name}{stu.student_class}{stu.section}")
+                print(password)
+                signup = UserCreationForm({"username":username, "password1":password, "password2":password})
+                if signup.is_valid():
+                    signup.save()
+                    s = Student.objects.get(pk=username)
+                    s.user_created = 1
+                    s.save()
+                    print('successs....')
+                print(username)
+            students = Student.objects.all().filter(user_created=0)
+            return render(request, 'student/register_student.html', {'students':students})
+        else:
+            return HttpResponseRedirect('/login/')    
+    else:
+        return HttpResponseRedirect('/admin/')
 
 def result(request, id, exam_id):
     if request.user.is_authenticated:

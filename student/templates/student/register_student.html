@@ -3,8 +3,20 @@
 {% block title %}
 {{ block.super }}Student Login
 {% endblock title %} 
+{% block style %}
+{{ block.super }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#stu").select2()
+    })
+</script>
+{% endblock style %}
 {% block content %}
 
+  
 <div class="container" style="margin-top:80px; margin-bottom:70px;">
     <div class="row justify-content-center">
         <div class="col s12 m4"></div>
@@ -12,16 +24,12 @@
              <h3>Login</h3>
              <form action="" method="post">
              {% csrf_token %}
-                <input list="students" class="input-field-box">
-                <datalist id="students">
-                    <option value="stu_1">
-                    <option value="stu_2">
-                    <option value="stu_3">
-                    <option value="stu_4">
-                    <option value="stu_4">
-                    <option value="stu_4">
-                    <option value="stu_4">
-                </datalist>
+                <select id="stu" class="input-field-box" name="username">
+                    <option selected disabled="true">--Select Student--</option>
+                    {% for student in students %}
+                        <option value="{{student.id}}">{{student.full_name}} - {{student.id}}</option>
+                    {% endfor %}
+                </select>
              <button type="submit" class="btn-block btn">Register</button>
              </form>
         </div>
