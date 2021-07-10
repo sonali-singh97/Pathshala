@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from .forms import Contact_form
+from events.models import Event, EventGallery
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
 def home(request):
+    events_data = Event.objects.all()
+    event_gallery = EventGallery.objects.all()
+    print("year")
     return render(request, 'vpsBase/index.html')
 
 def contact(request): 

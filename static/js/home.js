@@ -1,9 +1,8 @@
-
 const autoplay = () => {
-      
+
   let indicatorItems = document.querySelectorAll('.carousel .indicator-item'),
-  slideTime = 3000,
-  activeClass = "active";
+    slideTime = 3000,
+    activeClass = "active";
   setInterval(() => {
     indicatorItems.forEach(el => {
       if (el.classList.contains(activeClass)) {
@@ -18,55 +17,62 @@ const autoplay = () => {
   }, slideTime);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    console.log(elems)
-    var sidenavInstance = M.Sidenav.init(elems);
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.sidenav');
+  console.log(elems)
+  var sidenavInstance = M.Sidenav.init(elems);
 
-    // document.getElementsByClassName(".sidenav-trigger")[0].addEventListener("click", function(){
-    //   // console.log("sidenav")
-    //   sidenavInstance.open()
-    // });
+  // document.getElementsByClassName(".sidenav-trigger")[0].addEventListener("click", function(){
+  //   // console.log("sidenav")
+  //   sidenavInstance.open()
+  // });
 
-    var carousel = document.querySelectorAll('.carousel');
-    var instance = M.Carousel.init(carousel, { 
-      fullWidth: true,
-      indicators: true});
-
-     autoplay()
-  
-   var materialBox = document.querySelectorAll('.materialboxed');
-   var materialBoxInstance = M.Materialbox.init(materialBox, {});
-
-   var dropdown = document.querySelectorAll('.dropdown-trigger');
-   var dropdownInstance = M.Dropdown.init(dropdown, {});
-
+  var carousel = document.querySelectorAll('.carousel');
+  var instance = M.Carousel.init(carousel, {
+    fullWidth: true,
+    indicators: true
   });
 
+  autoplay()
 
-  $(document).ready(function() {
-    $('#example').DataTable( {
-        dom: 'Bfrtip',
-        buttons: [
-            'copy'
-        ]
-    } );
-} );
+  var materialBox = document.querySelectorAll('.materialboxed');
+  var materialBoxInstance = M.Materialbox.init(materialBox, {});
 
-  $(document).ready(function(){
-     
+  var dropdown = document.querySelectorAll('.dropdown-trigger');
+  var dropdownInstance = M.Dropdown.init(dropdown, {});
 
-    let owl = $('.owl-carousel')
-     owl.owlCarousel({
-      nav: true,
-      slideSpeed : 100,
-      paginationSpeed : 200,
-      items:1
-   })
+});
 
-    $(".dropdown-trigger").dropdown(); 
 
+$(document).ready(function () {
+  $('#example').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+      'copy'
+    ]
+  });
+});
+
+$(document).ready(function () {
+
+
+  let owl = $('.owl-carousel')
+  owl.owlCarousel({
+    nav: true,
+    slideSpeed: 100,
+    paginationSpeed: 200,
+    items: 1
+  })
+
+  $('.home-carousel').owlCarousel({
+    loop:true,
+    nav:true,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items: 1,
+    smartSpeed: 450
   });
 
+  $(".dropdown-trigger").dropdown();
 
- 
+});

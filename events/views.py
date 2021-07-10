@@ -6,6 +6,7 @@ def events(request):
     events_data = Event.objects.all()
     event_gallery = EventGallery.objects.all()
     events_year = Event.objects.all().order_by("-date")
+    print(events_year)
     todays_date = date.today()
     current_year = todays_date.year
 
@@ -22,7 +23,7 @@ def event_detail(request, id):
     event_detail = Event.objects.get(pk=id)
     event_gallery = EventGallery.objects.filter(event=id)
     main_image = EventGallery.objects.filter(event=id).filter(mainImage=True)
-    print(event_detail, event_gallery)
+    print(main_image[0].image)
     for image in event_gallery:
         print("mAIN" ,image)
-    return render(request, 'events/event-page.html', {"event": event_detail, "event_images": event_gallery, "main_image" : main_image})
+    return render(request, 'events/event-page.html', {"event": event_detail, "event_images": event_gallery, "main_image" : main_image[0].image})
