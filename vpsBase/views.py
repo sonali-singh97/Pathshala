@@ -9,7 +9,6 @@ def home(request):
     event_gallery = EventGallery.objects.all()
     events_year = Event.objects.all().order_by("-date")
     news_obj = News.objects.all()[:3]
-    print(news_obj[0].pdf.url)
     events = events_year[:10]
     return render(request, 'vpsBase/index.html', {"events": events, "news": news_obj})
 
