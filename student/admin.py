@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Class_Subject, Students_Class, Student, SubjectResult, Exam, FinalResult,  Fee_Type, Fee_Transaction, Payment
+from .models import Class_Subject, Students_Class, Student, SubjectResult, Exam, Student_user, FinalResult,  Fee_Type, Fee_Transaction, Payment
 
 class ClassSubjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'class_id')
@@ -29,7 +29,11 @@ admin.site.register(FinalResult, FinalResultAdmin)
 class ExamAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
 
+class StudentUserAdmin(admin.ModelAdmin):
+    list_display = ('username', 'password')
+
 admin.site.register(Exam, ExamAdmin)
+admin.site.register(Student_user, StudentUserAdmin)
 admin.site.register(Fee_Type)
 admin.site.register(Fee_Transaction)
 admin.site.register(Payment)

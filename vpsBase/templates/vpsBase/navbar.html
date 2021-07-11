@@ -17,8 +17,13 @@
       </ul>
     </div>
     <div class="navbar-top-panel-right">
-      <i class="fas fa-sign-in-alt"></i>
+      {% if isuser %}
+        <i class="fas fa-sign-in-alt"></i>
+        <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <i class="fas fa-sign-in-alt"></i>
       <a href="{% url 'login' %}">Login</a>
+      {% endif %}
     </div>
   </div>
 

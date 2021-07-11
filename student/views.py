@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import Student, FinalResult, SubjectResult, Exam
+from .models import Student, FinalResult, SubjectResult, Exam, Student_user
 from .forms import LoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
@@ -50,6 +50,8 @@ def register_students(request):
                 stu = Student.objects.get(pk=username)
                 password = BaseUserManager().make_random_password(8, f"{username}{stu.full_name}{stu.student_class}{stu.section}")
                 print(password)
+                newUser = Student_user(username=username, password= password)
+                newUser.save()
                 signup = UserCreationForm({"username":username, "password1":password, "password2":password})
                 if signup.is_valid():
                     signup.save()

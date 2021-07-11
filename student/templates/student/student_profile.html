@@ -9,7 +9,6 @@
     <div class="student-profile" >
     <div class="d-flex flex-row w-100">
        <h3 class="heading-student">Student Dashboard</h3>
-       <a href="{% url 'logout' %}" class="mt-35">Logout</a>
     </div>
     <div class="row">
         <div class="col s12 l4">
@@ -90,7 +89,7 @@
                     <div class="card">
                       <div class="card-content">
                           <h4>All Exam Results</h4>
-                            <table id="example" class="display nowrap">
+                            <table class="display nowrap">
                                 <thead>
                                   <tr>
                                       <th>Exam</th>
@@ -123,7 +122,7 @@
             <div class="card">
             <div class="card-content">
                 <h4>{{exam.title}}</h4>
-                  <table id="example" class="display">
+                  <table class="display">
                       <thead>
                         <tr>
                             <th>Subject</th>

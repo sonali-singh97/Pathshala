@@ -70,6 +70,10 @@ class FinalResult(models.Model):
     createdBy = models.ForeignKey(Teacher, on_delete=models.DO_NOTHING)
     createdAt = models.DateTimeField()
 
+class Student_user(models.Model):
+    username = models.IntegerField(default=0)
+    password = models.CharField(max_length=10)
+
 # class Fees(models.Model):
 #     title = models.CharField(max_length=50)
 #     amount = models.IntegerField(default=0)
