@@ -9,9 +9,17 @@ margin-top: 0;
 .resources .card {
     /* background-color: #D7ABAE; */
     background-color: #301a4b88;
-    min-width: 30rem;
+    width: 30rem;
     margin: 2rem;
     color: #fff;
+}
+
+.resources .card .card-content{
+  min-height: 18rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .resources .card-action a{

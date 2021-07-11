@@ -14,7 +14,7 @@ def events(request):
         event.year = int(event.getYear())
 
     end_year = int(events_year[len(events_year)-1].date.strftime('%Y'))
-    return render(request, 'events/events.html', { 'events': events_data , 'event_images' : event_gallery, 'year_list': range(end_year, current_year+1)} )
+    return render(request, 'events/events.html', { 'events': events_data , 'event_images' : event_gallery, 'year_list': range(end_year, current_year+1)  } )
 
 # def events(request):
 #     return render(request, 'events/events.html' )

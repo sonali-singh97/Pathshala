@@ -17,10 +17,24 @@ const autoplay = () => {
   }, slideTime);
 }
 
+
+
+function openNav() {
+  document.getElementsByClassName("mobile-sidenav")[0].style.visibility = "visible";
+  document.getElementsByClassName("mobile-sidenav-overlay")[0].style.visibility = "visible";
+  console.log("function called")
+}
+
+function closeNav() {
+  document.getElementsByClassName("mobile-sidenav")[0].style.visibility = "hidden";
+  document.getElementsByClassName("mobile-sidenav-overlay")[0].style.visibility = "hidden";
+  console.log("close function called")
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.sidenav');
-  console.log(elems)
-  var sidenavInstance = M.Sidenav.init(elems);
+  // var elems = document.querySelectorAll('.sidenav');
+  // console.log(elems)
+  // var sidenavInstance = M.Sidenav.init(elems);
 
   // document.getElementsByClassName(".sidenav-trigger")[0].addEventListener("click", function(){
   //   // console.log("sidenav")
@@ -38,9 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var materialBox = document.querySelectorAll('.materialboxed');
   var materialBoxInstance = M.Materialbox.init(materialBox, {});
 
+
+
   var dropdown = document.querySelectorAll('.dropdown-trigger');
   var dropdownInstance = M.Dropdown.init(dropdown, {});
-
 });
 
 
@@ -67,6 +82,7 @@ $(document).ready(function () {
   $('.home-carousel').owlCarousel({
     loop:true,
     nav:true,
+    navigationText: ["<div class='nav-button owl-prev'><i class='fas fa-arrow-left'></i></div>","<div class='nav-button owl-prev'><i class='fas fa-arrow-right'></i></div>"],
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
     items: 1,
