@@ -20,7 +20,7 @@ class Class_Subject(models.Model):
 
 class Student(models.Model):
     image = models.ImageField(upload_to="images", null=True)
-    student_id = models.IntegerField(default=0)
+    roll_number = models.IntegerField(default=0)
     full_name = models.CharField(max_length=20)
     student_class = models.ForeignKey(Students_Class, on_delete=models.PROTECT)
     section = models.CharField(max_length=1)
@@ -28,9 +28,13 @@ class Student(models.Model):
     session_end = models.DateField()
     dob = models.DateField()
     father_name = models.CharField(max_length=20)
-    contact_number = models.IntegerField(default=0)
+    mother_contact = models.IntegerField(default=0)
+    father_contact = models.IntegerField(default=0)
+    transport_facility = models.BooleanField(default=False)
     address = models.CharField(max_length=50)
     attendance = models.IntegerField(default=0)
+    total_present = models.IntegerField(default=0)
+    total_working_days = models.IntegerField(default=0)
     user_created = models.IntegerField(default=0, null=False)
     createdBy = models.ForeignKey(Teacher, on_delete=models.PROTECT)
     createdAt = models.DateTimeField(auto_now_add=True)
