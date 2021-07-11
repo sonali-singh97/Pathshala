@@ -21,7 +21,7 @@
 
     <div class="gallery-listing mt-50 padding-lr-20 padding-tb-50">
         <h2 class="heading">Gallery Listing</h2>
-        <div class="container d-flex justify-content-center align-items-center  mt-35">
+        <div class="gallery-images container d-flex flex-column justify-content-center align-items-center  mt-35">
          {% for poster in event.eventgallery_set.all %}
         <div class="card-image">
             <img class="materialboxed" src="{{poster.image.url}}"" alt="event-image" />

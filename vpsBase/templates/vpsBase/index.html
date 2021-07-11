@@ -46,40 +46,18 @@
         <div class="news-card col s12 ">
           <h2 class="heading text-left">Announcements</h2>
         </div>
-
+         {% for item in news %}
         <div class="news-card col s12">
           <time class="date-card d-flex flex-column justify-content-center align-content-center">
-            <p class="date">25</p>
-            <span class="month">May</span>
-            <span class="year">2021</span>
+            <p class="date">{{ item.datepublished}}</p>
+            <span class="month">{{ item.monthpublished}}</span>
+            <span class="year">{{ item.yearpublished}}</span>
           </time>
           <div class="news-content">
-            <h3> <a target="_blank" href="https://results.amucontrollerexams.com/courses/faculties/guides/Guide-2020-21.pdf">New Admissions Open </a></h3>
+            <h3> <a target="_blank" href="{{item.pdf.url}}"> {{ item.title}} </a></h3>
           </div>
         </div>
-
-        <div class="news-card col s12">
-          <time class="date-card d-flex flex-column justify-content-center align-content-center">
-            <p class="date">25</p>
-            <span class="month">May</span>
-            <span class="year">2021</span>
-          </time>
-          <div class="news-content">
-            <h3> <a target="_blank" href="https://results.amucontrollerexams.com/courses/faculties/guides/Guide-2020-21.pdf" >New Admissions Open </a></h3>
-          </div>
-        </div>
-
-        <div class="news-card col s12">
-          <time class="date-card d-flex flex-column justify-content-center align-content-center">
-            <p class="date">25</p>
-            <span class="month">May</span>
-            <span class="year">2021</span>
-          </time>
-          <div class="news-content">
-            <h3> <a target="_blank" href="https://results.amucontrollerexams.com/courses/faculties/guides/Guide-2020-21.pdf" >New Admissions Open </a></h3>
-          </div>
-        </div>
-
+         {% endfor%}
         <a href="{% url 'news' %}"><button class="btn waves-effect waves-light mt-30" type="submit" name="action">Read More
           <i class="material-icons right">arrow_forward</i>
         </button> </a>
@@ -117,65 +95,30 @@
 
     <div class="events-section-cards">
       <div class="row">
+       {% for item in events %}
         <div class="col s12 m4">
           <div class="card mt-50">
             <div class="card-image">
-              <img
-                src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="event" />
+               {% for poster in item.eventgallery_set.all %}
+                      {% if poster.mainImage%}
+                            <img src= "{{ poster.image.url}}" />
+                      {% endif %}
+                {% endfor %}
             </div>
             <div class="card-content d-flex  align-content-center">
               <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                <p class="date">25</p>
-                <span class="month">May</span>
-                <span class="year">2021</span>
+                <p class="date">{{ item.day}}</p>
+                <span class="month">{{ item.month}}</span>
+                <span class="year"> {{ item.getYear}} </span>
               </time>
               <div class="event-name">
-                <h4 class="text-left"><a href="{% url 'events' %}">Interschool Science Exhibition</a></h4>
+                <h4 class="text-left"><a href="/events/event-detail/{{item.id}}">{{item.name}}</a></h4>
               </div>
             </div>
           </div>
         </div>
+       {% endfor %}
 
-        <div class="col s12 m4">
-          <div class="card mt-50">
-            <div class="card-image">
-              <img
-                src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="event" />
-            </div>
-            <div class="card-content d-flex  align-content-center">
-              <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                <p class="date">25</p>
-                <span class="month">May</span>
-                <span class="year">2021</span>
-              </time>
-              <div class="event-name">
-                <h4 class="text-left"><a href="{% url 'events' %}">Interschool Science Exhibition</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card mt-50">
-            <div class="card-image">
-              <img
-                src="https://images.unsplash.com/photo-1578725140576-0f92a363e149?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGV2ZW50c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="event" />
-            </div>
-            <div class="card-content d-flex align-content-center">
-              <time class="date-card d-flex flex-column justify-content-center align-content-center">
-                <p class="date">25</p>
-                <span class="month">May</span>
-                <span class="year">2021</span>
-              </time>
-              <div class="event-name ">
-                <h4 class="text-left"><a href="{% url 'events' %}">Interschool Science Exhibition</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 

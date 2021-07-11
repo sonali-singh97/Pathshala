@@ -8,6 +8,40 @@
     display: none;
 }
 
+.mobile-sidenav{
+    visibility : hidden;
+    margin:0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #fff;
+    z-index: 100;
+    padding: 2rem !important;
+    font-size:1.4rem;
+    line-height: 3.2 !important;
+}
+
+.mobile-sidenav a{
+    color: var(--bg-color);
+}
+
+.mobile-sidenav-overlay{
+    visibility : hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-dropdown-content{
+    display:none;
+    padding-left:4rem !important;
+}
 
 nav {
     background-color: var(--bg-color);
@@ -18,9 +52,16 @@ nav {
 }
 
 nav .brand-logo {
-    color: #121212;
-    font-size: 1.6rem;
+  height: 100%;
+ overflow: hidden;
 }
+
+
+nav .brand-logo img{
+    width: 8rem;
+    height: 100%;
+    object-fit:cover;
+  }
 
 nav .nav-wrapper ul {
     margin : 0;
@@ -71,6 +112,9 @@ background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0
 color: #fff;
 }
 
+div .carousel .indicators{
+    z-index: 20;
+}
 /* About section */
 
 div .about-section {
@@ -208,7 +252,7 @@ div.owl-dots{
 
 .owl-nav {
 position:absolute;
-top:8.5rem;
+top:3rem;
 clear: both;
 width: 100%;
 z-index:1;
@@ -218,12 +262,12 @@ margin-left: 40%; */
 
 .owl-carousel .owl-prev {
     position: absolute;
-    left: 30%;
+    left: 10%;
   }
   
   .owl-carousel .owl-next {
       position: absolute;
-    right: 30%;
+    right: 10%;
   }
 
 
@@ -348,5 +392,18 @@ margin-left: 40%; */
        margin: 1.75rem  1rem;
 
    }
+
+   .owl-nav {
+    top:8.5rem;
+    }
+
+    .owl-carousel .owl-prev {
+        left: 30%;
+      }
+      
+      .owl-carousel .owl-next {
+        right: 30%;
+      }
+
 
 }

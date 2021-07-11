@@ -41,9 +41,9 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger "> <i class="material-icons">menu</i></a>
-
+      <a href="#" class="brand-logo"> <img src="{% static 'images/nav-brand-logo.png' %}" alt="vps_logo"></a>
+      {% comment %} <a href="#" data-target="#slide-out" class="sidenav-trigger "> <i class="material-icons">menu</i></a> {% endcomment %}
+        <a href="#" onclick="openNav()" class="sidenav-trigger "> <i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{% url 'home' %}">Home</a></li>
         <!-- <li><a href="{% url 'about' %}">About</a></li> -->
@@ -56,15 +56,32 @@
     </div>
   </nav>
 
-  <ul id="slide-out" class="sidenav">
-    <li><a href="#">Home</a></li>
-    <li><a class="dropdown-button" href="#" data-activates="about-dropdown">About <i
-          class="material-icons right"></i></a></li>
-    <li><a class="dropdown-button" href="#" data-activates="academics-dropdown">Academics</a><i
-        class="material-icons right"></i></li>
-    <li><a href="#">Events</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Login</a></li>
+  
+    <ul id="about-mobile-dropdown" class="mobile-dropdown-content">
+    <li><a href="{% url 'about' %}">About School</a></li>
+    <li><a href="{% url 'staffs' %}">Staffs</a></li>
+    <!-- 
+      <li><a href="#!">Join Us</a></li> -->
   </ul>
 
- 
+    <ul id="academics-mobile-dropdown" class="mobile-dropdown-content">
+    <li><a href="{% url 'admission' %}">Admission</a></li>
+    <li><a href="{% url 'resources' %}">Resources</a></li>
+    <!-- <li><a href="#!">Join Us</a></li> -->
+  </ul>
+
+<div id="sidenav"  >
+<div class="mobile-sidenav-overlay" onclick="closeNav()"> </div>
+  <ul class="mobile-sidenav">
+   <li><a href="{% url 'home' %}">Home</a></li>
+        <!-- <li><a href="{% url 'about' %}">About</a></li> -->
+        <li><a class="dropdown-trigger" href="#" data-target="about-mobile-dropdown">About  <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li><a class="dropdown-trigger" href="#" data-target="academics-mobile-dropdown">Academics  <i class="fa fa-caret-down"></i></a></li>
+        <!-- <li><a href="{% url 'admission' %}">Academics</a></li> -->
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li> <a href="{% url 'login' %}">Login</a></li>
+  </ul>
+
+ </div>

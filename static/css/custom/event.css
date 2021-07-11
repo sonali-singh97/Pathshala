@@ -1,5 +1,6 @@
 .event-detail img, .gallery-listing img{
     max-width: 100%;
+    object-fit: cover;
 }
 
 .gallery-listing{
@@ -8,9 +9,9 @@
 
 }
 
-/* .gallery-listing .card-image:not(:last-child){
+.gallery-listing .card-image:not(:last-child){
     margin-bottom: 3rem;    
-} */
+}
 
 .gallery-listing .card-image .material-placeholder{
     width: 100%;
@@ -23,15 +24,21 @@
     object-fit: cover;
 }
 
+.events-section-cards{
+    transition:all 0.3s ease-in-out;
+}
+
 @media only screen and (min-width: 601px){
    .page .event-detail{
         padding:8rem;
+        height: auto;
     }
 
     .event-detail .event-image, .event-detail .event-description {
         padding-left:5rem;
         padding-right: 5rem;
     }
+
     
     .gallery-listing{
         padding: 8rem;
@@ -42,6 +49,13 @@
         width: 30rem;
         height: 30rem;
     }
+
+    .gallery-listing .gallery-images{
+        flex-direction:row;
+    }
     
+    .gallery-listing .card-image:not(:last-child){
+        margin-bottom: 0;
+    }
 
 }

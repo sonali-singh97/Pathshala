@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from .forms import Contact_form
 from events.models import Event, EventGallery
+from news.models import News
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
 def home(request):
-    events_data = Event.objects.all()
     event_gallery = EventGallery.objects.all()
-    print("year")
-    return render(request, 'vpsBase/index.html')
+    events_year = Event.objects.all().order_by("-date")
+    news_obj = News.objects.all()[:3]
+    print(news_obj[0].pdf.url)
+    events = events_year[:10]
+    return render(request, 'vpsBase/index.html', {"events": events, "news": news_obj})
 
 def contact(request): 
     if request.method == "POST":
