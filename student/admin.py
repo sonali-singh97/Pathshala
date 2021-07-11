@@ -12,7 +12,7 @@ class StudentClassAdmin(admin.ModelAdmin):
 admin.site.register(Students_Class, StudentClassAdmin)
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'full_name', 'student_class', 'section', 'contact_number')
+    list_display = ('id', 'full_name', 'student_class', 'section', 'father_contact')
 
 admin.site.register(Student, StudentAdmin)
 
