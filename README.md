@@ -9,6 +9,8 @@ This dynamic system with a bird view of data and reports gives next level of pow
 Mobile App and web access of school system makes life of students, teachers and parents super easy. Accessing all the important information on an app dashboard improves
 over-all connectivity with school.
 
+## Demo 
+![Demo Video](https://media.giphy.com/media/ZKWagUz5XYXP9RmVFz/giphy.gif)
 
 ## Features
 
@@ -41,10 +43,7 @@ Go to the project directory
   python manage.py runserver
 ```
 
-  
-## Screenshots
-
-![App Screenshot](./static/images/school.png)
+ 
 
   
 ```
