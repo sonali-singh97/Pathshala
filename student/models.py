@@ -5,7 +5,7 @@ class Students_Class(models.Model):
     class_name = models.CharField(max_length=10)
     strength = models.IntegerField(default=0)
     class_teacher = models.ForeignKey(Teacher, on_delete=models.DO_NOTHING)
-    tution_fees = models.IntegerField(default=0)
+    tuition_fees = models.IntegerField(default=0)
 
     def __str__(self):
         return self.class_name
@@ -35,6 +35,7 @@ class Student(models.Model):
     attendance = models.IntegerField(default=0)
     total_present = models.IntegerField(default=0)
     total_working_days = models.IntegerField(default=0)
+    bus_charge = models.IntegerField(default=0)
     user_created = models.IntegerField(default=0, null=False)
     createdBy = models.ForeignKey(Teacher, on_delete=models.PROTECT)
     createdAt = models.DateTimeField(auto_now_add=True)
@@ -74,6 +75,21 @@ class Student_user(models.Model):
     username = models.IntegerField(default=0)
     password = models.CharField(max_length=10)
 
+
+class Student_fees(models.Model):
+    student_id = models.ForeignKey(Student, on_delete=models.PROTECT)
+    class_id = models.ForeignKey(Students_Class, on_delete=models.DO_NOTHING)
+    month_fees = models.IntegerField(default=0)
+    bus_fees = models.IntegerField(default=0)
+    total_fees = models.IntegerField(default=0)
+    session_month_name = models.CharField(max_length=25)
+    session_month = models.IntegerField(default=0)
+    session_year = models.IntegerField(default=0)
+    status = models.CharField(max_length=10)
+    is_paid = models.BooleanField(default=False)
+    paid_at = models.CharField(max_length=20)
+    is_message_sent = models.IntegerField(default=0)
+    is_fined = models.BooleanField(default=False)
 
 
 # class Fee_Type(models.Model):
