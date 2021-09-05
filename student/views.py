@@ -26,11 +26,19 @@ def payments(request, id):
         month = current_time.month
         date = current_time.day
         month_name = current_time.strftime("%B")
-        allFess = Student_fees.objects.filter(student_id=id)
-        fee = Student_fees.objects.filter(session_year=2021).filter(session_month=4)
-        print(fee[0].id, "filtered fee")
-        print(list(allFess), "all fees length")
+        session_months = [f"April {year}", f"May {year}", f"June {year}", f"July {year}", f"August {year}", f"September {year}", f"October {year}", f"November {year}", f"December {year}", f"January {year}", f"February {year}", f"March {year}", f"April {year}"]
+        current_month_index = session_months.index(f"{month_name} {year}")
+        # current_month_index = 16
+        if current_month_index <= 12:
+            allFess = Student_fees.objects.filter(student_id=id)[:current_month_index + 1]
+        else:
+            allFess = Student_fees.objects.filter(student_id=id)[:13]
+        # fee = Student_fees.objects.filter(session_year=2021).filter(session_month=4)
+        # print(fee[0].id, "filtered fee")
+        print(len(allFess), session_months.index(f"{month_name} {year}"), month_name,"all fees length")
         return render(request, "student/student_payments.html", { "allFees": allFess })
+    else:
+        return HttpResponseRedirect('/login/')
 
 def all_login(request):
     if not request.user.is_authenticated:
