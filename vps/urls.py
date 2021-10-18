@@ -31,5 +31,6 @@ urlpatterns = [
     path('academics/', include("academics.urls")),
     path('staffs/',include("aboutAndStaffs.urls")) ,
     path('student-profile/', include("student.urls")),
-    path('teacher-profile/', include("teacher.urls"))
+    path('teacher-profile/', include("teacher.urls")),
+     path('dashboard/', include("dashboard.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
