@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'news',
     'events',
     'student',
-    'teacher'
+    'teacher',
+    'dashboard'
 ]
 
 MIDDLEWARE = [
