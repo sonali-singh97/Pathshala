@@ -31,7 +31,7 @@
                       </thead>
               
                       <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>Class 6</td>
                             <td>April</td>
@@ -41,12 +41,24 @@
                             <td> {{year}} </td>
                             <td> {{month}} </td>
                             <td> {{date}} </td>
-                        </tr>
-                      <!-- {% for res in allMonths %}
+                        </tr> -->
+                      {% for fee in allFees %}
                         <tr>
-                          <td>{{res}}</td>
+                          <td>{{fee.id}}</td>
+                          <td>{{fee.class_id.class_name}}</td>
+                          <td>{{fee.session_month_name}} ({{ fee.session_year }})</td>
+                          <td>{{fee.month_fees}}</td>
+                          <td>{{fee.bus_fees}}</td>
+                          <td>{{fee.total_fees}}</td>
+                          {% if fee.is_fined == True %}
+                            <td>Yes</td>
+                          {% else %}
+                            <td>No</td>
+                          {% endif %}
+                          <td>{{fee.status}}</td>
+                          <td>{{fee.paid_at}}</td>
                         </tr>
-                      {% endfor %} -->
+                      {% endfor %}
                       </tbody>
                     </table>
               </div>

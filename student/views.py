@@ -21,24 +21,24 @@ def student_page(request, id):
 
 def payments(request, id):
     if request.user.is_authenticated:
-        # current_time = datetime.datetime.now()
-        # year = current_time.year
-        # month = current_time.month
-        # date = current_time.day
-        # month_name = current_time.strftime("%B")
-        # student = Student.objects.get(pk=id);
-        # print(student.student_class.tuition_fees, student.bus_charge, "this is student info");
-        # session_months = [f"April", f"May", f"June", f"July", f"August", f"September", f"October", f"November", f"December", f"January", f"February", f"March", f"April"]
-        # session_year = [year, year, year, year, year, year, year, year, year, year + 1, year + 1, year + 1, year + 1]
-        # one_month_total_fees = student.bus_charge + student.student_class.tuition_fees
-        # one_month_tuition_fees = student.student_class.tuition_fees
-        # one_month_bus_fees = student.bus_charge
-        # datetime_object = datetime.datetime.strptime("August", "%B")
-        # print(datetime.datetime.strptime("August", "%B").month, "month number print")
-        # for i in range(len(session_months)):
-        #     fee = Student_fees(student_id=student, class_id=student.student_class, month_fees=one_month_tuition_fees, bus_fees=one_month_bus_fees, total_fees=one_month_total_fees, session_month_name=session_months[i], session_month=datetime.datetime.strptime(session_months[i], "%B").month, session_year=session_year[i], status="pending", is_paid=False, paid_at="-", is_message_sent=0, is_fined=False)
-        #     fee.save()
-        return render(request, "student/student_payments.html")
+        current_time = datetime.datetime.now()
+        year = current_time.year
+        month = current_time.month
+        date = current_time.day
+        month_name = current_time.strftime("%B")
+        session_months = [f"April {year}", f"May {year}", f"June {year}", f"July {year}", f"August {year}", f"September {year}", f"October {year}", f"November {year}", f"December {year}", f"January {year}", f"February {year}", f"March {year}", f"April {year}"]
+        current_month_index = session_months.index(f"{month_name} {year}")
+        # current_month_index = 16
+        if current_month_index <= 12:
+            allFess = Student_fees.objects.filter(student_id=id)[:current_month_index + 1]
+        else:
+            allFess = Student_fees.objects.filter(student_id=id)[:13]
+        # fee = Student_fees.objects.filter(session_year=2021).filter(session_month=4)
+        # print(fee[0].id, "filtered fee")
+        print(len(allFess), session_months.index(f"{month_name} {year}"), month_name,"all fees length")
+        return render(request, "student/student_payments.html", { "allFees": allFess })
+    else:
+        return HttpResponseRedirect('/login/')
 
 def all_login(request):
     if not request.user.is_authenticated:
