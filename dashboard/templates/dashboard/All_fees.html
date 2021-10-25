@@ -25,25 +25,35 @@
                 </tr>
             </thead>
             <tbody>
+                {% for fee in allFees %}
                 <tr>
-                    <td> #120</td>
-                    <td> Rohit Raj</td>
-                    <td> 8 </td>
-                    <td> A </td>
+                    <td> # {{ fee.id }}</td>
+                    <td> {{ fee.student_id.full_name }}</td>
+                    <td> {{ fee.class_id }} </td>
+                    <td> {{ fee.student_id.section }} </td>
                     <td> Monthly Fees</td>
-                    <td> Rs 10,000</td>
-                    <td> 
-                        <span class="rounded-div rounded-div--success">
-                            Paid
+                    <td> Rs. {{ fee.month_fees }}</td>
+                    <td>  
+                    {% if not fee.is_paid %}
+                        <span class="rounded-div rounded-div--warning">
+                            Unpaid
                         </span>
-                    </td>
-                    <td> 9999999999</td>
-                    <td>rohit@gmail.com</td>
+                    {% else %}
+                        <span class="rounded-div rounded-div--success">
+                            paid
+                        </span>
+                    {% endif %}
+                </td>
+                    <td> {{ fee.student_id.father_contact }}</td>
+                    <td>rishav@gmail.com</td>
                 </tr>
-                <tr>
+                {% endfor %}
+                  
+                <!-- <tr>
                     <td> #122</td>
                     <td> Rishav Raj</td>
                     <td> 5 </td>
+
                     <td> B </td>
                     <td> Monthly Fees</td>
                     <td> Rs 10,000</td>
@@ -67,7 +77,7 @@
                 </td>
                     <td> 7779999999</td>
                     <td> saksham@gmail.com</td>
-                </tr>
+                </tr> -->
             </tbody>
             <tfoot>
                 <tr>
