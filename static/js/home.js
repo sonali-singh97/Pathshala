@@ -22,13 +22,11 @@ const autoplay = () => {
 function openNav() {
   document.getElementsByClassName("mobile-sidenav")[0].style.visibility = "visible";
   document.getElementsByClassName("mobile-sidenav-overlay")[0].style.visibility = "visible";
-  console.log("function called")
 }
 
 function closeNav() {
   document.getElementsByClassName("mobile-sidenav")[0].style.visibility = "hidden";
   document.getElementsByClassName("mobile-sidenav-overlay")[0].style.visibility = "hidden";
-  console.log("close function called")
 }
 
 document.addEventListener('DOMContentLoaded', function () {

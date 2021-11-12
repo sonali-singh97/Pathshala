@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
     <!-- endinject -->
+
     <!-- Plugin css for this page -->
     <link
       rel="stylesheet"
@@ -32,8 +33,11 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.material.min.css">
 
      <!-- Custom styles -->
-    <link rel="stylesheet" href="{% static 'css/custom/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/dashboard/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/dashboard/utils.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/dashboard/form.css' %}" />
     <!-- <link rel="stylesheet" href="{% static 'fonts/poppins_font.css' %}" /> -->
+
     {% endblock style %}
     <title>{% block title %} Dashboard | {% endblock title %}</title>
   </head>
@@ -63,50 +67,16 @@
                 </a>
               </div>
               <div class="mdc-list-item mdc-drawer-item">
-                <a class="mdc-drawer-link" href="pages/forms/basic-forms.html">
+                <a class="mdc-drawer-link" href="{% url 'all-fees' %}">
                   <!-- <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i> -->
-                  All Fees
+                  All Fees Collection
                 </a>
               </div>
               <div class="mdc-list-item mdc-drawer-item">
-                <a
-                  class="mdc-expansion-panel-link"
-                  href="#"
-                  data-toggle="expansionPanel"
-                  data-target="ui-sub-menu"
-                >
-                  <i
-                    class="
-                      material-icons
-                      mdc-list-item__start-detail
-                      mdc-drawer-item-icon
-                    "
-                    aria-hidden="true"
-                    >dashboard</i
-                  >
-                  UI Features
-                  <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                <a class="mdc-drawer-link" href="{% url 'promotion' %}">
+                  <!-- <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i> -->
+                  Student Promotion
                 </a>
-                <div class="mdc-expansion-panel" id="ui-sub-menu">
-                  <nav class="mdc-list mdc-drawer-submenu">
-                    <div class="mdc-list-item mdc-drawer-item">
-                      <a
-                        class="mdc-drawer-link"
-                        href="pages/ui-features/buttons.html"
-                      >
-                        Buttons
-                      </a>
-                    </div>
-                    <div class="mdc-list-item mdc-drawer-item">
-                      <a
-                        class="mdc-drawer-link"
-                        href="pages/ui-features/typography.html"
-                      >
-                        Typography
-                      </a>
-                    </div>
-                  </nav>
-                </div>
               </div>
               <div class="mdc-list-item mdc-drawer-item">
                 <a
@@ -605,11 +575,13 @@
     <!-- End plugin js for this page-->
 
     <!-- inject:js -->
-    <script src="{% static 'js/dashboard/material.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <!-- <script src="{% static 'js/dashboard/material.js' %}"></script> -->
     <script src="{% static 'js/dashboard/misc.js' %}"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="{% static 'js/dashboard/dashboard.js' %}"></script>
+    <script src="{% static 'js/dashboard/home.js' %}"></script>
     <!-- End custom js for this page-->
 
     <script>

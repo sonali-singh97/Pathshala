@@ -22930,7 +22930,7 @@ span.rounded-div--warning {
   /* Sidebar */
   .mdc-drawer {
     background: linear-gradient(#2a1c5a, #4b3a6e);
-    background: url(../../images/dashboard/sidebar-bg.jpg);
+    background: url(../../../images/dashboard/sidebar-bg.jpg);
     position: fixed;
   }
   

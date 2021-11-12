@@ -1,0 +1,29 @@
+
+.form-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-footer {
+    padding: 20px 0;
+}
+
+.form-footer button {
+margin-right: 10px;
+}
+.stu-promotion-form {
+    display: none;
+}
+.form-container input {
+    background-color: #f0f1f3;
+    border-color: #f0f1f3;
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+    color: #b4b4b4;
+    padding:0 20px ;
+    border-radius: 4px;
+}
+
+
