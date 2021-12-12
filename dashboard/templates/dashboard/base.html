@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% block style %}
+
     <!-- plugins:css -->
     <link
       rel="stylesheet"
@@ -19,15 +20,10 @@
     <!-- endinject -->
 
     <!-- Plugin css for this page -->
-    <link
-      rel="stylesheet"
-      href="{% static 'css/vendors/flag-icon-css/css/flag-icon.min.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static 'css/vendors/jvectormap/jquery-jvectormap.css' %}"
-    />
+    <link rel="stylesheet"  href="{% static 'css/vendors/jvectormap/jquery-jvectormap.css' %}"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- End plugin css for this page -->
+
     <!-- Datatables styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/4.0.0/material-components-web.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.material.min.css">
@@ -59,9 +55,9 @@
             <p class="email">clydemiles@elenor.us</p>
           </div> -->
           <div class="mdc-list-group">
-            <nav class="mdc-list mdc-drawer-menu">
+            <div class="mdc-list mdc-drawer-menu">
               <div class="mdc-list-item mdc-drawer-item">
-                <a class="mdc-drawer-link" href="index.html">
+                <a class="mdc-drawer-link" href="{% url 'dashboard' %}">
                   <i class="fas fa-home"></i>
                   Dashboard
                 </a>
@@ -76,6 +72,12 @@
                 <a class="mdc-drawer-link" href="{% url 'promotion' %}">
                   <!-- <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i> -->
                   Student Promotion
+                </a>
+              </div>
+              <div class="mdc-list-item mdc-drawer-item">
+                <a class="mdc-drawer-link" href="{% url 'add-expense' %}">
+                  <!-- <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i> -->
+                  Add Expense
                 </a>
               </div>
               <div class="mdc-list-item mdc-drawer-item">
@@ -109,7 +111,7 @@
                   Charts
                 </a>
               </div>
-            </nav>
+            </div>
           </div>
           <div class="profile-actions">
             <a href="javascript:;">Settings</a>
@@ -557,6 +559,7 @@
       </div>
     </div>
     <!-- plugins:js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'css/vendors/js/vendor.bundle.base.js' %}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page-->
@@ -586,6 +589,7 @@
 
     <script>
       $(document).ready(function () {
+        $('.modal').modal();
         $("#example").DataTable({
           columnDefs: [
           {

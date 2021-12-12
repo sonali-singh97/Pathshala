@@ -11,3 +11,6 @@ def all_fees(request):
 
 def student_promotion(request):
      return render(request, 'dashboard/student_promotion.html')
+
+def add_expense(request):
+     return render(request, 'dashboard/add_expense.html')

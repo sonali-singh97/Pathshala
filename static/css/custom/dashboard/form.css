@@ -5,6 +5,13 @@
     justify-content: space-between;
 }
 
+.checkbox-div{
+   height: 60px;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+
 .form-footer {
     padding: 20px 0;
 }
@@ -12,18 +19,29 @@
 .form-footer button {
 margin-right: 10px;
 }
+
 .stu-promotion-form {
     display: none;
 }
-.form-container input {
-    background-color: #f0f1f3;
-    border-color: #f0f1f3;
+
+.input {
+    background-color: #f0f1f3 !important;
+    border-color: #f0f1f3 !important;
     height: 45px;
     width: 100%;
     margin-top: 10px;
-    color: #b4b4b4;
-    padding:0 20px ;
+    color: #111111 !important;
+    display: border-box !important;
+    padding:0 5px !important ;
     border-radius: 4px;
+}
+
+.fees-checkbox{
+    margin-right: 25px;
+}
+
+.fees-checkbox .span{
+    padding-left: 30px !important;
 }
 
 
