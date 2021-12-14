@@ -1,8 +1,7 @@
 
 .form-container {
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 10px !important;
 }
 
 .checkbox-div{
@@ -42,6 +41,10 @@ margin-right: 10px;
 
 .fees-checkbox .span{
     padding-left: 30px !important;
+}
+
+.radio{
+    margin-right: 25px;
 }
 
 

@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var materialBox = document.querySelectorAll('.materialboxed');
   var materialBoxInstance = M.Materialbox.init(materialBox, {});
 
-
-
   var dropdown = document.querySelectorAll('.dropdown-trigger');
   var dropdownInstance = M.Dropdown.init(dropdown, {});
 });
