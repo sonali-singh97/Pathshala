@@ -103,8 +103,8 @@ Student Promotion
           </div>
           
           <div class="form-footer">
-            <button class="mdc-button mdc-button--raised mdc-ripple-upgraded">
-             Save
+            <button data-target="promotion-modal" class="mdc-button mdc-button--raised mdc-ripple-upgraded modal-trigger">
+              Save
             </button>
             <button class="mdc-button mdc-button--raised filled-button--light mdc-ripple-upgraded">
             Reset
@@ -113,6 +113,34 @@ Student Promotion
 
         </div>
       </div>
+
+           <!-- Modal Structure -->
+           <div id="promotion-modal" class="modal">
+            <div class="modal-content">
+              <h3> Promotion Details</h3> <br>
+              <div>Do you want to execute this promotion.
+              
+                Details are: <br>
+                <ul>
+                  <li> Name: </li>
+                  <li>Admission Number:</li>
+                  <li>Current Session:</li>
+                  <li>Promoted to:</li>
+                </ul>
+              </div>
+             
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action 
+                  modal-close mdc-button  mdc-button--raised filled-button--secondary">
+                  Cancel
+              </a>
+              <a href="#!" class="modal-action 
+              modal-close mdc-button mdc-button--raised mdc-ripple-upgraded">
+              Submit
+          </a>
+          </div>
+          </div>
     </div>
   </div>
 </div>
