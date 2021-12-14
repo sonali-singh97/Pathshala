@@ -1,5 +1,7 @@
 {% extends './base.html' %}
 {% load static %}
+{% block style %}
+{% endblock style %}
 {% block title %}
 {{ block.super }} Home
 {% endblock title %}
@@ -10,6 +12,7 @@
       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
      <div class="mdc-card p-2">
         <h6 class="card-title card-padding "> All Fees Collection</h6>
+        <!-- <input type="text" name="search" id="search" class="input" /> -->
         <table id="example"  class="mdl-data-table" style="width:100%">
             <thead>
                 <tr>

@@ -60,7 +60,7 @@ Student Promotion {% endblock title %} {% block content %}
           </div>
 
           <div class="form-footer">
-            <button data-target="fees-modal" class="mdc-button mdc-button--raised mdc-ripple-upgraded">
+            <button data-target="fees-modal" class="mdc-button mdc-button--raised mdc-ripple-upgraded modal-trigger">
               Save
             </button>
             <button class="mdc-button mdc-button--raised filled-button--light mdc-ripple-upgraded " >
@@ -71,14 +71,29 @@ Student Promotion {% endblock title %} {% block content %}
           <!-- Modal Structure -->
           <div id="fees-modal" class="modal">
             <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
+              <h3> Fee Confirmation</h3>
+              <div>Do you want to submit this student fees.
+              
+                Fee Details are: <br>
+                <ul>
+                  <li> Name: </li>
+                  <li>Admission Number:</li>
+                  <li>Amount:</li>
+                  <li> Fee Type:</li>
+                </ul>
+              </div>
+             
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat"
-                >Agree</a
-              >
-            </div>
+              <a href="#!" class="modal-action 
+                  modal-close mdc-button  mdc-button--raised filled-button--secondary">
+                  Cancel
+              </a>
+              <a href="#!" class="modal-action 
+              modal-close mdc-button mdc-button--raised mdc-ripple-upgraded">
+              Submit
+          </a>
+          </div>
           </div>
         </div>
       </div>
