@@ -1,0 +1,104 @@
+{% extends './base.html' %} {% load static %} {% block title %} {{ block.super}}
+Student Promotion {% endblock title %} {% block content %}
+
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div
+      class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12"
+    >
+      <div class="mdc-card">
+        <h6 class="card-title mb-0">Add Expense</h6>
+
+        <div class="mt-3">
+          <div class="row">
+            <div class="input-div col s3">
+              <label for="adm_no">Admission No.</label> <br />
+              <input type="number" name="adm-no" id="adm_no" class="input" />
+            </div>
+            <div class="input-div col s3">
+              <label for="name">Full Name</label> <br />
+              <input type="text" name="name" id="name" class="input" />
+            </div>
+
+            <div class="input-div col s3">
+              <label for="phone">Phone</label> <br />
+              <input type="number" name="phone" id="phone" class="input" />
+            </div>
+            <div class="input-div col s3">
+              <label for="email">Email</label> <br />
+              <input type="email" name="name" id="name" class="input" />
+            </div>
+
+            <div class="checkbox-div col s12">
+              <label class="fees-checkbox">
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span>January Fees (Rs. 1200)</span>
+              </label>
+
+              <label class="fees-checkbox">
+                <input type="checkbox" class="filled-in" />
+                <span>Transport Fees (Rs. 1200)</span>
+              </label>
+
+              <label class="fees-checkbox">
+                <input type="checkbox" class="filled-in" />
+                <span>Exam Fees (Rs. 1200)</span>
+              </label>
+            </div>
+
+            <div class="input-div col s3">
+              <label for="amount">Total Amount</label> <br />
+              <input
+                type="text"
+                name="amount"
+                id="amount"
+                class="input"
+                disabled
+                placeholder="Rs. 1200"
+              />
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button data-target="fees-modal" class="mdc-button mdc-button--raised mdc-ripple-upgraded modal-trigger">
+              Save
+            </button>
+            <button class="mdc-button mdc-button--raised filled-button--light mdc-ripple-upgraded " >
+              Reset
+            </button>
+          </div>
+
+          <!-- Modal Structure -->
+          <div id="fees-modal" class="modal">
+            <div class="modal-content">
+              <h3> Fee Confirmation</h3>
+              <div>Do you want to submit this student fees.<br>
+              
+                Fee Details are: 
+                <ul>
+                  <li> Name: </li>
+                  <li>Admission Number:</li>
+                  <li>Amount:</li>
+                  <li> Fee Type:</li>
+                </ul>
+              </div>
+             
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action 
+                  modal-close mdc-button  mdc-button--raised filled-button--secondary">
+                  Cancel
+              </a>
+              <a href="#!" class="modal-action 
+              modal-close mdc-button mdc-button--raised mdc-ripple-upgraded">
+              Submit
+          </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

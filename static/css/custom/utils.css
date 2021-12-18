@@ -92,6 +92,8 @@
     text-align: right;
 }
 
+
+
 button.btn {
    color : var(--bg-color);
    border: 2px solid var(--bg-color);
