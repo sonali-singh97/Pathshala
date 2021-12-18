@@ -12,7 +12,33 @@
       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
      <div class="mdc-card p-2">
         <h6 class="card-title card-padding "> All Fees Collection</h6>
-        <!-- <input type="text" name="search" id="search" class="input" /> -->
+
+        <div class="filter-div">
+        <div class="filter-data">
+            <div>
+            <label >Search</label> <br/>
+            <input type="text" name="search" id="example_filter" class="filter-input" />
+           </div>
+           <div>
+            <label >Class</label>  <br/>
+                <select >
+                  <option value="" selected>All Classes</option>
+                  <option value="1">Class 1</option>
+                  <option value="2">Class 2</option>
+                  <option value="3">Class 3</option>
+                </select>
+            </div>
+
+            <div>
+            <label >Display data :</label>  <br/>
+            <select >
+              <option value="1" selected> Last 1 month</option>
+              <option value="2">Last 2 months</option>
+              <option value="3"> Last 3 months</option>
+            </select>
+        </div>
+        </div>
+       </div>
         <table id="example"  class="mdl-data-table" style="width:100%">
             <thead>
                 <tr>

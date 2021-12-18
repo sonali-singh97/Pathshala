@@ -48,3 +48,33 @@ margin-right: 10px;
 }
 
 
+/***** All fees styles *****/
+
+.filter-div{
+    position: relative;
+    width: 100%;
+}
+
+.filter-data{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: -30px;
+}
+
+.filter-div .filter-input, .filter-div select {
+    background-color: #f0f1f3 ;
+    border: none ;
+    height: 45px;
+    width: 250px;
+    margin-right: 10px;
+    color: #111111;
+    display: border-box;
+    padding:0 5px ;
+    border-radius: 4px;
+}
+
+
