@@ -6,7 +6,7 @@
 {% block content %}
 
 <div class="container events-page text-center">
-    <div class="owl-carousel owl-theme ">
+    <div class="">
        {% for i in year_list %}
         <div class="events-section item ">
             <h2 class="heading"> Year {{i}} </h2>
@@ -17,9 +17,9 @@
                     <div class="card mt-50">
                         <div class="card-image">
                             {% for poster in item.eventgallery_set.all %}
-                            {% if poster.mainImage%}
-                            <img src= "{{ poster.image.url}}" />
-                            {% endif %}
+                                {% if poster.mainImage%}
+                                        <img src= "{{ poster.image.url }}" />
+                                {% endif %}
                             {% endfor %}
                         </div>
                         <div class="card-content d-flex  align-content-center">
