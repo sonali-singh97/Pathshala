@@ -9,10 +9,10 @@
     <div class="row justify-content-center mt-30">
         {% if teachers %}
           {% for teacher in teachers %}
-            <div class="col m3 s12">
-            <div class="card">
-            <div class="card-image">
-              <img src="{{teacher.image.url}}" />
+            <div class="teacher-card col m4 s12">
+            <div class="card ">
+            <div class="card-image" style="height: 220px">
+              <img style="height: 100%" src="{{teacher.image.url}}" />
             </div>
             <div class="card-content d-flex flex-column" style="padding: 12px">
               <h5 style="margin-top: 0; margin-bottom: 4px; font-weight: 500">
