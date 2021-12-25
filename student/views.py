@@ -77,8 +77,8 @@ def register_students(request):
                 newUser.save()
                 signup = UserCreationForm({"username":username, "password1":password, "password2":password})
                 if signup.is_valid():
+                    print(" studnet fees")
                     signup.save()
-
 
                     # Insert Fees Data for particular user
                     current_time = datetime.datetime.now()
@@ -86,8 +86,8 @@ def register_students(request):
                     month = current_time.month
                     date = current_time.day
                     month_name = current_time.strftime("%B")
-                    student = Student.objects.get(pk=id);
-                    print(student.student_class.tuition_fees, student.bus_charge, "this is student info");
+                    student = Student.objects.get(pk=username)
+                    print(student.student_class.tuition_fees, student.bus_charge, "this is student info")
                     session_months = [f"April", f"May", f"June", f"July", f"August", f"September", f"October", f"November", f"December", f"January", f"February", f"March", f"April"]
                     session_year = [year, year, year, year, year, year, year, year, year, year + 1, year + 1, year + 1, year + 1]
                     one_month_total_fees = student.bus_charge + student.student_class.tuition_fees
@@ -96,7 +96,10 @@ def register_students(request):
                     datetime_object = datetime.datetime.strptime("August", "%B")
                     print(datetime.datetime.strptime("August", "%B").month, "month number print")
                     for i in range(len(session_months)):
-                        fee = Student_fees(student_id=student, class_id=student.student_class, month_fees=one_month_tuition_fees, bus_fees=one_month_bus_fees, total_fees=one_month_total_fees, session_month_name=session_months[i], session_month=datetime.datetime.strptime(session_months[i], "%B").month, session_year=session_year[i], status="pending", is_paid=False, paid_at="-", is_message_sent=0, is_fined=False)
+                        d = datetime.date(int(session_year[i]) ,int(datetime.datetime.strptime(session_months[i], "%B").month), 10 )
+                        print(d)
+                        fee = Student_fees(student_id=student, class_id=student.student_class, month_fees=one_month_tuition_fees, bus_fees=one_month_bus_fees, total_fees=one_month_total_fees, session_month_name=session_months[i], session_month=datetime.datetime.strptime(session_months[i], "%B").month, session_year=session_year[i], status="pending", is_paid=False, paid_at="-", is_message_sent=0, is_fined=False, due_date = d)
+
                         fee.save()
 
 

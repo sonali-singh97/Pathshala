@@ -23,9 +23,9 @@
             <label >Class</label>  <br/>
                 <select >
                   <option value="" selected>All Classes</option>
-                  <option value="1">Class 1</option>
-                  <option value="2">Class 2</option>
-                  <option value="3">Class 3</option>
+                  {% for c in allClasses %}
+                  <option value="{{c.id}}"> {{ c.class_name}} </option>
+                  {% endfor %}
                 </select>
             </div>
 
