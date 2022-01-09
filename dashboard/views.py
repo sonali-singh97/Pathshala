@@ -11,9 +11,8 @@ def all_fees(request):
      print(allFees[0])
      allClasses = Students_Class.objects.all()
      now = timezone.now()
-     one_month_ago = datetime.datetime(now.year, now.month - 1, 1)
-     data = Student_fees.objects.filter(due_date__gt=one_month_ago,
-                                  due_date__lt=now)
+     # one_month_ago = datetime.datetime(now.year, now.month - 1, 1)
+     data = Student_fees.objects.filter( due_date__lt=now)
      print(data)
 
      return render(request, 'dashboard/all_fees.html', { "allFees": allFees, "allClasses": allClasses })
