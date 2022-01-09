@@ -90,6 +90,8 @@ class Student_fees(models.Model):
     paid_at = models.CharField(max_length=20)
     is_message_sent = models.IntegerField(default=0)
     is_fined = models.BooleanField(default=False)
+    due_date = models.DateTimeField(null = True)
+    payment_date = models.DateTimeField(null = True)
 
 
 # class Fee_Type(models.Model):

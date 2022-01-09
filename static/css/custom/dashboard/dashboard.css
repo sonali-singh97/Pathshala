@@ -21832,12 +21832,13 @@ span.rounded-div--warning {
     border-radius: 4px;
     background-color: #f8f8f8;
   }
-  input.input-sm {
-    height: 45px;
+   .form-control#example-filter {
+    /* height: 45px;
     padding: 5px 15px;
     font-size: 14px;
-    width: 300px;
-  }
+    width: 300px; */
+    display: none;
+  } 
   
   .table {
     width: 100%;
@@ -22947,7 +22948,12 @@ span.rounded-div--warning {
   
   .mdc-drawer .mdc-drawer__header .brand-logo {
     display: block;
-    padding: 28px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .mdc-drawer .mdc-drawer__header .brand-logo img {
+   max-width: 100%;
   }
   
   .mdc-drawer .mdc-drawer__content .user-info {

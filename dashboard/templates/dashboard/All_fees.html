@@ -12,7 +12,36 @@
       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
      <div class="mdc-card p-2">
         <h6 class="card-title card-padding "> All Fees Collection</h6>
-        <!-- <input type="text" name="search" id="search" class="input" /> -->
+
+        <div class="filter-div">
+        <form class="filter-data">
+            <div>
+            <label >Search</label> <br/>
+            <input type="text" name="search" id="example_filter" class="filter-input" />
+           </div>
+           <div>
+            <label >Class</label>  <br/>
+                <select >
+                  <option value="" selected>All Classes</option>
+                  {% for c in allClasses %}
+                  <option value="{{c.id}}"> {{ c.class_name}} </option>
+                  {% endfor %}
+                </select>
+            </div>
+
+            <div>
+            <label >Display data :</label>  <br/>
+            <select >
+              <option value="1" selected> Last 1 month</option>
+              <option value="2">Last 2 months</option>
+              <option value="3"> Last 3 months</option>
+            </select>
+        </div>
+        <button type="submit" class="mdc-button mdc-button--raised mdc-ripple-upgraded modal-trigger">
+            Search
+          </button>
+        </form>
+       </div>
         <table id="example"  class="mdl-data-table" style="width:100%">
             <thead>
                 <tr>
@@ -29,7 +58,7 @@
             </thead>
             <tbody>
                 {% for fee in allFees %}
-                <tr>
+                <tr onclick="toggleDrawer()">
                     <td> # {{ fee.id }}</td>
                     <td> {{ fee.student_id.full_name }}</td>
                     <td> {{ fee.class_id }} </td>
@@ -51,7 +80,7 @@
                     <td>rishav@gmail.com</td>
                 </tr>
                 {% endfor %}
-      
+                  
             </tbody>
             <tfoot>
                 <tr>
@@ -68,9 +97,41 @@
             </tfoot>
         </table>
     </div>
-
      </div>
      </div>
      </div>
 
+     <div class="side-drawer d-none " id="side-drawer" >
+        <div class="side-drawer-div d-flex justify-content-start">
+            <div class="student-image">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+            </div>
+            <div class="d-flex flex-col student-details justify-content-evenly ">
+            <p> <b>Name &nbsp; </b> : &nbsp; Rohini</p>
+            <p> <b>Class &nbsp;</b> : &nbsp; 8-A</p>
+            <p>  <b>Roll No  &nbsp; </b> : &nbsp; 123</p>
+            <p>  <b>Phone &nbsp; </b> : &nbsp; 8989898989</p>
+            </div>
+        </div>
+
+        <table id="student-fees"  class="mdl-data-table" style="width:100%">
+            <thead>
+                <tr>
+                <th> Fee Type</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th>Paid on</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> Monthly fess</td>
+                    <td> Paid</td>
+                    <td> Rs. 1500</td>
+                    <td> 15 Jan 2022</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 {% endblock content %}
