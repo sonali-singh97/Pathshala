@@ -30,8 +30,8 @@
 
      <!-- Custom styles -->
     <link rel="stylesheet" href="{% static 'css/custom/dashboard/dashboard.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/custom/dashboard/utils.css' %}" />
     <link rel="stylesheet" href="{% static 'css/custom/dashboard/form.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom/dashboard/utils.css' %}" />
     <!-- <link rel="stylesheet" href="{% static 'fonts/poppins_font.css' %}" /> -->
 
     
@@ -528,6 +528,7 @@
     <!-- <script src="{% static 'js/dashboard/material.js' %}"></script> -->
     <script src="{% static 'js/dashboard/misc.js' %}"></script>
     <!-- endinject -->
+    
     <!-- Custom js for this page-->
     <script src="{% static 'js/dashboard/dashboard.js' %}"></script>
     <script src="{% static 'js/dashboard/home.js' %}"></script>
@@ -556,6 +557,8 @@
             },
           ],
         });
+
+        $("#student-fees").DataTable({ });
       });
     </script>
   </body>

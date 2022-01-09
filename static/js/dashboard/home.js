@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("function-called student")
   }
 
+  function toggleDrawer(){
+    document.getElementById('side-drawer').classList.toggle("d-none");
+    console.log("Drawer toggle")
+  }
+
