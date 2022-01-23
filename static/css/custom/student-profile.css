@@ -1,13 +1,28 @@
 .profile-page{
     background: #Fafafa;
+    padding: 50px 100px;
+    height: 100%;
 }
-.student-details .profile-img , .student-profile .teacher-img{
+
+.profile-info-grid {
+    display: grid;
+    grid-gap: 15px 15px;
+    grid-template-columns: 1fr 2fr ;
+}
+
+.fees-data{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/* .student-details .profile-img , .student-profile .teacher-img{
     width: 50%;
 }
 
 .student-details , .student-profile {
     width: 100%;
-    /* height: 20rem; */
     border-radius: 100%;
 }
 
@@ -34,9 +49,6 @@
     font-size: 3rem;
 }
 
-/* .student-profile .attendance-card, .student-profile .teacher-card{
-    height: 30rem;
-} */
 
 .teacher-card .teacher-info{
     flex-direction: column;
@@ -48,11 +60,11 @@
 }
  table.profile-info tr {
      border-bottom:none ;
- }
+ } */
 
  
 
-
+/* 
 @media only screen and (min-width: 601px) {
 
  .profile-page {
@@ -65,15 +77,11 @@
     height: 35rem;
 }
 
-
-/* .teacher-card .teacher-img {
-    margin-right: 2.5rem;
-} */
 .teacher-card .teacher-info{
     flex-direction: row;
     justify-content: space-evenly !important;
 }
 
-}
+} */
 
 

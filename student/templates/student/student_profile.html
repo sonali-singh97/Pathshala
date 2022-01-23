@@ -1,16 +1,131 @@
-{% extends 'vpsBase/base.html' %}
+{% extends './base.html' %}
 {% load static %}
 {% block title %}
 {{ block.super }}Student
 {% endblock title %} 
 {% block content %}
 
-<div class="profile-page">
     <div class="student-profile" >
-    <div class="d-flex flex-row w-100">
        <h3 class="heading-student">Student Dashboard</h3>
-    </div>
-    <div class="row">
+
+       <div class="profile-info-grid">
+         <div class="col s12 l4">
+            <div class="card">
+              Student - info
+            </div>
+         </div>
+
+         <div class="col s12 l8">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  Class Teacher
+                </div>
+              </div>
+              <div class="">
+                <div class="card">
+                  Due Fees
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <table id="example" class="uk-table uk-table-hover uk-table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th> Exam Name</th>
+                        <th>Class</th>
+                        <th> Subject</th>
+                        <th>Date</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td> Class Test</td>
+                      <td> Class 8</td>
+                      <td>English</td>
+                      <td> 13/09/2021</td>
+                      <td> 9 /10</td>
+                    </tr>
+                    <tr>
+                      <td> Class Test</td>
+                      <td> Class 8</td>
+                      <td>English</td>
+                      <td> 13/09/2021</td>
+                      <td> 9 /10</td>
+                    </tr>
+                    <tr>
+                      <td> Class Test</td>
+                      <td> Class 8</td>
+                      <td>English</td>
+                      <td> 13/09/2021</td>
+                      <td> 9 /10</td>
+                    </tr>
+                    <tr>
+                      <td> Class Test</td>
+                      <td> Class 8</td>
+                      <td>English</td>
+                      <td> 13/09/2021</td>
+                      <td> 9 /10</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            
+         </div>
+
+         <!-- <div class="col s12 l3">
+          Notifications
+         </div> -->
+
+         <div class="fees-data">
+          Fees Info
+          <div class="card">
+            <table id="example" class="uk-table uk-table-hover uk-table-striped" style="width:100%">
+              <thead>
+                  <tr>
+                      <th> Exam Name</th>
+                      <th>Class</th>
+                      <th> Subject</th>
+                      <th>Date</th>
+                      <th>Score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td> Class Test</td>
+                    <td> Class 8</td>
+                    <td>English</td>
+                    <td> 13/09/2021</td>
+                    <td> 9 /10</td>
+                  </tr>
+                  <tr>
+                    <td> Class Test</td>
+                    <td> Class 8</td>
+                    <td>English</td>
+                    <td> 13/09/2021</td>
+                    <td> 9 /10</td>
+                  </tr>
+                  <tr>
+                    <td> Class Test</td>
+                    <td> Class 8</td>
+                    <td>English</td>
+                    <td> 13/09/2021</td>
+                    <td> 9 /10</td>
+                  </tr>
+                  <tr>
+                    <td> Class Test</td>
+                    <td> Class 8</td>
+                    <td>English</td>
+                    <td> 13/09/2021</td>
+                    <td> 9 /10</td>
+                  </tr>
+              </tbody>
+              </table>
+          </div>
+         </div>
+    <!-- <div class="row">
         <div class="col s12 l4">
             <div class="card student-details">
                 <div class="card-content"> 
@@ -147,7 +262,7 @@
             </div>
           </div>
         {% endif %}
-      </div>
+      </div> -->
 </div>
 </div>
 
