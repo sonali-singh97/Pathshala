@@ -50,7 +50,11 @@ def all_login(request):
                 user = authenticate(username=student_username, password=student_password)
                 if user is not None:
                     login(request, user)
-                    return HttpResponseRedirect('/student-profile/' + str(request.user) + '/')
+                    if request.user.is_staff:
+                        return HttpResponseRedirect('/dashboard/')
+                    else:
+                        return HttpResponseRedirect('/student-profile/' + str(request.user) + '/')
+
         else:
             student_login = LoginForm()
         return render(request, 'student/login.html', {'login_form': student_login})
