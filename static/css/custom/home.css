@@ -1,8 +1,6 @@
 @import "./styles.css";
 
-/* .page{
-    padding:20px;
-} */
+
 /* nav top panel */
 .navbar-top-panel {
     display: none;
@@ -115,10 +113,20 @@ color: #fff;
 div .carousel .indicators{
     z-index: 20;
 }
+
 /* About section */
 
 div .about-section {
     text-align: center;
+}
+
+/* Staff page */
+.teacher-card .card .card-image{
+    height: 240px !important;
+}
+
+.teacher-card .card .card-image img{
+    height: 100%;
 }
 
 /* Latest news section */
@@ -126,7 +134,7 @@ div .about-section {
 .news-card {
     border-bottom: 1px solid #ddd;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start !important;
     align-items: center;
     padding: 1rem 0 !important;
     color: var(--bg-color)
@@ -273,7 +281,6 @@ margin-left: 40%; */
 
 @media only screen and (min-width: 601px) {
     .navbar-top-panel {
-        display: block;
         display: flex;
         justify-content: space-between;
         align-items: center;

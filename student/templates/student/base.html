@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.uikit.min.css">
+ 
+  <link rel="stylesheet" href="{% static 'css/custom/student-profile.css' %}" />
+
+  <!-- <link rel="stylesheet" href="{% static 'css/custom/styles.css' %}" /> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/custom/footer.css' %}" /> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/custom/utils.css' %}" /> -->
+  <!-- <link rel="stylesheet" href="{% static 'fonts/poppins_font.css' %}" /> -->
+
+  <title>{% block title %}Vimal Public School | {% endblock title %}</title>
+</head>
+
+<body>
+<div class="profile-page">
+   {% block content %}{% endblock content %}
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/dataTables.uikit.min.js"></script>
+
+  <!-- <script type="text/javascript" src="{% static 'js/student.js' %}"></script> -->
+
+  <script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+    } );
+  </script>
+</body>
+
+</html>
