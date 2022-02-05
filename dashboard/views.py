@@ -13,17 +13,6 @@ def dashboard(request):
           return HttpResponseRedirect('/login/')
 
 def all_fees(request):
-<<<<<<< HEAD
-     allFees = Student_fees.objects.all()
-     print(allFees[0])
-     allClasses = Students_Class.objects.all()
-     now = timezone.now()
-     # one_month_ago = datetime.datetime(now.year, now.month - 1, 1)
-     data = Student_fees.objects.filter( due_date__lt=now)
-     print(data)
-
-     return render(request, 'dashboard/all_fees.html', { "allFees": allFees, "allClasses": allClasses })
-=======
      if request.user.is_authenticated and request.user.is_staff:
           allFees = Student_fees.objects.all()
           print(allFees[0])
@@ -31,7 +20,6 @@ def all_fees(request):
      else:
           return HttpResponseRedirect('/login/')
 
->>>>>>> 8997aa197338a71e16c938794029242772010a6e
 
 def student_promotion(request):
      if request.user.is_authenticated and request.user.is_staff:
